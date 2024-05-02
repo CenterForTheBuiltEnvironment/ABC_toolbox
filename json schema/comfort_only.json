@@ -1,0 +1,60 @@
+{
+  "name": "Comfort only",
+  "description": "",
+  "reference_time": "2021-02-23T09:40:16",
+  "output_freq": 1,
+  "options": {
+    "csvOutput": true,
+    "sensation_adaptation": false,
+    "sensation_coredTdt": false,
+    "ignore_segments": false,
+    "ignore_physiology": true,
+    "comfort_model": false,
+    "comfort_setpoint_input":  false
+  },
+  "bodybuilder": {
+    "height": 1.8,
+    "weight": 74,
+    "age": 55,
+    "body_fat": 0.14,
+    "gender": "male",
+    "skin_color": "white",
+
+    "bloodFlow_factor": 1,
+    "skinBloodFlow_factor": 1,
+    "conductance_factor": 1,
+    "capacitance_factor": 1
+
+  },
+  "segments": {
+    "Back": {
+      "comfort_model": {
+        "C1_GEZero": 1.2345
+      }
+    }
+  },
+  "phases": [
+    {
+      "start_time": 0,
+      "end_time": 1000,
+      "default_data": {
+        "rh": 0.5,
+        "v": 0.1,
+        "solar": 0.000,
+        "ta": 36,
+        "mrt": 36,
+        "tskin": 36.0,
+        "dtskin_dt": 0,
+        "tcore": 37,
+        "dtcore": 0,
+        "tksin_setpoint": 33
+      },
+      "ramp": false,
+      "met": 1,
+      "clo_ensemble_name": "CATARC_Summer_1",
+      "met_activity_name": null,
+      "segment_data": {}
+    }
+
+  ]
+}

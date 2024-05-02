@@ -1,0 +1,1255 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "default": {},
+    "title": "Root Schema",
+    "required": [
+        "reference_time",
+        "output_freq",
+        "options",
+        "comfort_model",
+        "clothing",
+        "bodybuilder",
+        "id",
+        "phases"
+    ],
+    "properties": {
+        "name": {
+            "type": "string",
+            "default": "",
+            "title": "The name Schema",
+        },
+        "description": {
+            "type": "string",
+            "default": "",
+            "title": "The description Schema",
+            "examples": [
+                "This is a file for AB209 project."
+            ]
+        },
+        "reference_time": {
+            "type": "string",
+            "default": "",
+            "title": "The reference_time Schema",
+            "examples": [
+                "2024-02-07T02:31:28"
+            ]
+        },
+        "output_freq": {
+            "type": "integer",
+            "default": 0,
+            "title": "The output_freq Schema",
+            "examples": [
+                60
+            ]
+        },
+        "options": {
+            "type": "object",
+            "default": {},
+            "title": "The options Schema",
+            "required": [
+                "csvOutput",
+                "sensation_adaptation",
+                "sensation_coredTdt"
+            ],
+            "properties": {
+                "csvOutput": {
+                    "type": "boolean",
+                    "default": false,
+                    "title": "The csvOutput Schema",
+                    "examples": [
+                        false
+                    ]
+                },
+                "sensation_adaptation": {
+                    "type": "boolean",
+                    "default": false,
+                    "title": "The sensation_adaptation Schema",
+                    "examples": [
+                        false
+                    ]
+                },
+                "sensation_coredTdt": {
+                    "type": "boolean",
+                    "default": false,
+                    "title": "The sensation_coredTdt Schema",
+                    "examples": [
+                        false
+                    ]
+                }
+            },
+            "examples": [{
+                "csvOutput": false,
+                "sensation_adaptation": false,
+                "sensation_coredTdt": false
+            }]
+        },
+        "comfort_model": {
+            "type": "object",
+            "default": {},
+            "title": "The comfort_model Schema",
+            "required": [
+                "overall_sensation_model",
+                "local_sensation_model",
+                "overall_comfort_model",
+                "local_comfort_model"
+            ],
+            "properties": {
+                "overall_sensation_model": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The overall_sensation_model Schema",
+                    "examples": [
+                        "original"
+                    ]
+                },
+                "local_sensation_model": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The local_sensation_model Schema",
+                    "examples": [
+                        "original"
+                    ]
+                },
+                "overall_comfort_model": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The overall_comfort_model Schema",
+                    "examples": [
+                        "original"
+                    ]
+                },
+                "local_comfort_model": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The local_comfort_model Schema",
+                    "examples": [
+                        "original"
+                    ]
+                }
+            },
+            "examples": [{
+                "overall_sensation_model": "original",
+                "local_sensation_model": "original",
+                "overall_comfort_model": "original",
+                "local_comfort_model": "original"
+            }]
+        },
+        "clothing": {
+            "type": "array",
+            "default": [],
+            "title": "The clothing Schema",
+            "items": {
+                "type": "object",
+                "default": {},
+                "title": "A Schema",
+                "required": [
+                    "ensemble_name",
+                    "description",
+                    "segment_data"
+                ],
+                "properties": {
+                    "ensemble_name": {
+                        "type": "string",
+                        "default": "",
+                        "title": "The ensemble_name Schema",
+                        "examples": [
+                            "changing clo value"
+                        ]
+                    },
+                    "description": {
+                        "type": "string",
+                        "default": "",
+                        "title": "The description Schema",
+                        "examples": [
+                            "the values are changed based on the input conditions"
+                        ]
+                    },
+                    "segment_data": {
+                        "type": "object",
+                        "default": {},
+                        "title": "The segment_data Schema",
+                        "required": [
+                            "Head",
+                            "Chest",
+                            "Back",
+                            "Pelvis",
+                            "Left Upper Arm",
+                            "Right Upper Arm",
+                            "Left Lower Arm",
+                            "Right Lower Arm",
+                            "Left Hand",
+                            "Right Hand",
+                            "Left Thigh",
+                            "Right Thigh",
+                            "Left Lower Leg",
+                            "Right Lower Leg",
+                            "Left Foot",
+                            "Right Foot"
+                        ],
+                        "properties": {
+                            "Head": {
+                                "type": "object",
+                                "default": {},
+                                "title": "The Head Schema",
+                                "required": [
+                                    "fclo",
+                                    "iclo"
+                                ],
+                                "properties": {
+                                    "fclo": {
+                                        "type": "number",
+                                        "default": 0.0,
+                                        "title": "The fclo Schema",
+                                        "examples": [
+                                            1.31
+                                        ]
+                                    },
+                                    "iclo": {
+                                        "type": "number",
+                                        "default": 0.0,
+                                        "title": "The iclo Schema",
+                                        "examples": [
+                                            1.0
+                                        ]
+                                    }
+                                },
+                                "examples": [{
+                                    "fclo": 1.31,
+                                    "iclo": 1.0
+                                }]
+                            },
+                            "Chest": {
+                                "type": "object",
+                                "default": {},
+                                "title": "The Chest Schema",
+                                "required": [
+                                    "fclo",
+                                    "iclo"
+                                ],
+                                "properties": {
+                                    "fclo": {
+                                        "type": "number",
+                                        "default": 0.0,
+                                        "title": "The fclo Schema",
+                                        "examples": [
+                                            1.31
+                                        ]
+                                    },
+                                    "iclo": {
+                                        "type": "number",
+                                        "default": 0.0,
+                                        "title": "The iclo Schema",
+                                        "examples": [
+                                            1.0
+                                        ]
+                                    }
+                                },
+                                "examples": [{
+                                    "fclo": 1.31,
+                                    "iclo": 1.0
+                                }]
+                            },
+                            "Back": {
+                                "type": "object",
+                                "default": {},
+                                "title": "The Back Schema",
+                                "required": [
+                                    "fclo",
+                                    "iclo"
+                                ],
+                                "properties": {
+                                    "fclo": {
+                                        "type": "number",
+                                        "default": 0.0,
+                                        "title": "The fclo Schema",
+                                        "examples": [
+                                            1.31
+                                        ]
+                                    },
+                                    "iclo": {
+                                        "type": "number",
+                                        "default": 0.0,
+                                        "title": "The iclo Schema",
+                                        "examples": [
+                                            1.0
+                                        ]
+                                    }
+                                },
+                                "examples": [{
+                                    "fclo": 1.31,
+                                    "iclo": 1.0
+                                }]
+                            },
+                            "Pelvis": {
+                                "type": "object",
+                                "default": {},
+                                "title": "The Pelvis Schema",
+                                "required": [
+                                    "fclo",
+                                    "iclo"
+                                ],
+                                "properties": {
+                                    "fclo": {
+                                        "type": "number",
+                                        "default": 0.0,
+                                        "title": "The fclo Schema",
+                                        "examples": [
+                                            1.31
+                                        ]
+                                    },
+                                    "iclo": {
+                                        "type": "number",
+                                        "default": 0.0,
+                                        "title": "The iclo Schema",
+                                        "examples": [
+                                            1.0
+                                        ]
+                                    }
+                                },
+                                "examples": [{
+                                    "fclo": 1.31,
+                                    "iclo": 1.0
+                                }]
+                            },
+                            "Left Upper Arm": {
+                                "type": "object",
+                                "default": {},
+                                "title": "The Left Upper Arm Schema",
+                                "required": [
+                                    "fclo",
+                                    "iclo"
+                                ],
+                                "properties": {
+                                    "fclo": {
+                                        "type": "number",
+                                        "default": 0.0,
+                                        "title": "The fclo Schema",
+                                        "examples": [
+                                            1.31
+                                        ]
+                                    },
+                                    "iclo": {
+                                        "type": "number",
+                                        "default": 0.0,
+                                        "title": "The iclo Schema",
+                                        "examples": [
+                                            1.0
+                                        ]
+                                    }
+                                },
+                                "examples": [{
+                                    "fclo": 1.31,
+                                    "iclo": 1.0
+                                }]
+                            },
+                            "Right Upper Arm": {
+                                "type": "object",
+                                "default": {},
+                                "title": "The Right Upper Arm Schema",
+                                "required": [
+                                    "fclo",
+                                    "iclo"
+                                ],
+                                "properties": {
+                                    "fclo": {
+                                        "type": "number",
+                                        "default": 0.0,
+                                        "title": "The fclo Schema",
+                                        "examples": [
+                                            1.31
+                                        ]
+                                    },
+                                    "iclo": {
+                                        "type": "number",
+                                        "default": 0.0,
+                                        "title": "The iclo Schema",
+                                        "examples": [
+                                            1.0
+                                        ]
+                                    }
+                                },
+                                "examples": [{
+                                    "fclo": 1.31,
+                                    "iclo": 1.0
+                                }]
+                            },
+                            "Left Lower Arm": {
+                                "type": "object",
+                                "default": {},
+                                "title": "The Left Lower Arm Schema",
+                                "required": [
+                                    "fclo",
+                                    "iclo"
+                                ],
+                                "properties": {
+                                    "fclo": {
+                                        "type": "number",
+                                        "default": 0.0,
+                                        "title": "The fclo Schema",
+                                        "examples": [
+                                            1.31
+                                        ]
+                                    },
+                                    "iclo": {
+                                        "type": "number",
+                                        "default": 0.0,
+                                        "title": "The iclo Schema",
+                                        "examples": [
+                                            1.0
+                                        ]
+                                    }
+                                },
+                                "examples": [{
+                                    "fclo": 1.31,
+                                    "iclo": 1.0
+                                }]
+                            },
+                            "Right Lower Arm": {
+                                "type": "object",
+                                "default": {},
+                                "title": "The Right Lower Arm Schema",
+                                "required": [
+                                    "fclo",
+                                    "iclo"
+                                ],
+                                "properties": {
+                                    "fclo": {
+                                        "type": "number",
+                                        "default": 0.0,
+                                        "title": "The fclo Schema",
+                                        "examples": [
+                                            1.31
+                                        ]
+                                    },
+                                    "iclo": {
+                                        "type": "number",
+                                        "default": 0.0,
+                                        "title": "The iclo Schema",
+                                        "examples": [
+                                            1.0
+                                        ]
+                                    }
+                                },
+                                "examples": [{
+                                    "fclo": 1.31,
+                                    "iclo": 1.0
+                                }]
+                            },
+                            "Left Hand": {
+                                "type": "object",
+                                "default": {},
+                                "title": "The Left Hand Schema",
+                                "required": [
+                                    "fclo",
+                                    "iclo"
+                                ],
+                                "properties": {
+                                    "fclo": {
+                                        "type": "number",
+                                        "default": 0.0,
+                                        "title": "The fclo Schema",
+                                        "examples": [
+                                            1.31
+                                        ]
+                                    },
+                                    "iclo": {
+                                        "type": "number",
+                                        "default": 0.0,
+                                        "title": "The iclo Schema",
+                                        "examples": [
+                                            1.0
+                                        ]
+                                    }
+                                },
+                                "examples": [{
+                                    "fclo": 1.31,
+                                    "iclo": 1.0
+                                }]
+                            },
+                            "Right Hand": {
+                                "type": "object",
+                                "default": {},
+                                "title": "The Right Hand Schema",
+                                "required": [
+                                    "fclo",
+                                    "iclo"
+                                ],
+                                "properties": {
+                                    "fclo": {
+                                        "type": "number",
+                                        "default": 0.0,
+                                        "title": "The fclo Schema",
+                                        "examples": [
+                                            1.31
+                                        ]
+                                    },
+                                    "iclo": {
+                                        "type": "number",
+                                        "default": 0.0,
+                                        "title": "The iclo Schema",
+                                        "examples": [
+                                            1.0
+                                        ]
+                                    }
+                                },
+                                "examples": [{
+                                    "fclo": 1.31,
+                                    "iclo": 1.0
+                                }]
+                            },
+                            "Left Thigh": {
+                                "type": "object",
+                                "default": {},
+                                "title": "The Left Thigh Schema",
+                                "required": [
+                                    "fclo",
+                                    "iclo"
+                                ],
+                                "properties": {
+                                    "fclo": {
+                                        "type": "number",
+                                        "default": 0.0,
+                                        "title": "The fclo Schema",
+                                        "examples": [
+                                            1.31
+                                        ]
+                                    },
+                                    "iclo": {
+                                        "type": "number",
+                                        "default": 0.0,
+                                        "title": "The iclo Schema",
+                                        "examples": [
+                                            1.0
+                                        ]
+                                    }
+                                },
+                                "examples": [{
+                                    "fclo": 1.31,
+                                    "iclo": 1.0
+                                }]
+                            },
+                            "Right Thigh": {
+                                "type": "object",
+                                "default": {},
+                                "title": "The Right Thigh Schema",
+                                "required": [
+                                    "fclo",
+                                    "iclo"
+                                ],
+                                "properties": {
+                                    "fclo": {
+                                        "type": "number",
+                                        "default": 0.0,
+                                        "title": "The fclo Schema",
+                                        "examples": [
+                                            1.31
+                                        ]
+                                    },
+                                    "iclo": {
+                                        "type": "number",
+                                        "default": 0.0,
+                                        "title": "The iclo Schema",
+                                        "examples": [
+                                            1.0
+                                        ]
+                                    }
+                                },
+                                "examples": [{
+                                    "fclo": 1.31,
+                                    "iclo": 1.0
+                                }]
+                            },
+                            "Left Lower Leg": {
+                                "type": "object",
+                                "default": {},
+                                "title": "The Left Lower Leg Schema",
+                                "required": [
+                                    "fclo",
+                                    "iclo"
+                                ],
+                                "properties": {
+                                    "fclo": {
+                                        "type": "number",
+                                        "default": 0.0,
+                                        "title": "The fclo Schema",
+                                        "examples": [
+                                            1.31
+                                        ]
+                                    },
+                                    "iclo": {
+                                        "type": "number",
+                                        "default": 0.0,
+                                        "title": "The iclo Schema",
+                                        "examples": [
+                                            1.0
+                                        ]
+                                    }
+                                },
+                                "examples": [{
+                                    "fclo": 1.31,
+                                    "iclo": 1.0
+                                }]
+                            },
+                            "Right Lower Leg": {
+                                "type": "object",
+                                "default": {},
+                                "title": "The Right Lower Leg Schema",
+                                "required": [
+                                    "fclo",
+                                    "iclo"
+                                ],
+                                "properties": {
+                                    "fclo": {
+                                        "type": "number",
+                                        "default": 0.0,
+                                        "title": "The fclo Schema",
+                                        "examples": [
+                                            1.31
+                                        ]
+                                    },
+                                    "iclo": {
+                                        "type": "number",
+                                        "default": 0.0,
+                                        "title": "The iclo Schema",
+                                        "examples": [
+                                            1.0
+                                        ]
+                                    }
+                                },
+                                "examples": [{
+                                    "fclo": 1.31,
+                                    "iclo": 1.0
+                                }]
+                            },
+                            "Left Foot": {
+                                "type": "object",
+                                "default": {},
+                                "title": "The Left Foot Schema",
+                                "required": [
+                                    "fclo",
+                                    "iclo"
+                                ],
+                                "properties": {
+                                    "fclo": {
+                                        "type": "number",
+                                        "default": 0.0,
+                                        "title": "The fclo Schema",
+                                        "examples": [
+                                            1.31
+                                        ]
+                                    },
+                                    "iclo": {
+                                        "type": "number",
+                                        "default": 0.0,
+                                        "title": "The iclo Schema",
+                                        "examples": [
+                                            1.0
+                                        ]
+                                    }
+                                },
+                                "examples": [{
+                                    "fclo": 1.31,
+                                    "iclo": 1.0
+                                }]
+                            },
+                            "Right Foot": {
+                                "type": "object",
+                                "default": {},
+                                "title": "The Right Foot Schema",
+                                "required": [
+                                    "fclo",
+                                    "iclo"
+                                ],
+                                "properties": {
+                                    "fclo": {
+                                        "type": "number",
+                                        "default": 0.0,
+                                        "title": "The fclo Schema",
+                                        "examples": [
+                                            1.31
+                                        ]
+                                    },
+                                    "iclo": {
+                                        "type": "number",
+                                        "default": 0.0,
+                                        "title": "The iclo Schema",
+                                        "examples": [
+                                            1.0
+                                        ]
+                                    }
+                                },
+                                "examples": [{
+                                    "fclo": 1.31,
+                                    "iclo": 1.0
+                                }]
+                            }
+                        },
+                        "examples": [{
+                            "Head": {
+                                "fclo": 1.31,
+                                "iclo": 1.0
+                            },
+                            "Chest": {
+                                "fclo": 1.31,
+                                "iclo": 1.0
+                            },
+                            "Back": {
+                                "fclo": 1.31,
+                                "iclo": 1.0
+                            },
+                            "Pelvis": {
+                                "fclo": 1.31,
+                                "iclo": 1.0
+                            },
+                            "Left Upper Arm": {
+                                "fclo": 1.31,
+                                "iclo": 1.0
+                            },
+                            "Right Upper Arm": {
+                                "fclo": 1.31,
+                                "iclo": 1.0
+                            },
+                            "Left Lower Arm": {
+                                "fclo": 1.31,
+                                "iclo": 1.0
+                            },
+                            "Right Lower Arm": {
+                                "fclo": 1.31,
+                                "iclo": 1.0
+                            },
+                            "Left Hand": {
+                                "fclo": 1.31,
+                                "iclo": 1.0
+                            },
+                            "Right Hand": {
+                                "fclo": 1.31,
+                                "iclo": 1.0
+                            },
+                            "Left Thigh": {
+                                "fclo": 1.31,
+                                "iclo": 1.0
+                            },
+                            "Right Thigh": {
+                                "fclo": 1.31,
+                                "iclo": 1.0
+                            },
+                            "Left Lower Leg": {
+                                "fclo": 1.31,
+                                "iclo": 1.0
+                            },
+                            "Right Lower Leg": {
+                                "fclo": 1.31,
+                                "iclo": 1.0
+                            },
+                            "Left Foot": {
+                                "fclo": 1.31,
+                                "iclo": 1.0
+                            },
+                            "Right Foot": {
+                                "fclo": 1.31,
+                                "iclo": 1.0
+                            }
+                        }]
+                    }
+                },
+                "examples": [{
+                    "ensemble_name": "changing clo value",
+                    "description": "the values are changed based on the input conditions",
+                    "segment_data": {
+                        "Head": {
+                            "fclo": 1.31,
+                            "iclo": 1.0
+                        },
+                        "Chest": {
+                            "fclo": 1.31,
+                            "iclo": 1.0
+                        },
+                        "Back": {
+                            "fclo": 1.31,
+                            "iclo": 1.0
+                        },
+                        "Pelvis": {
+                            "fclo": 1.31,
+                            "iclo": 1.0
+                        },
+                        "Left Upper Arm": {
+                            "fclo": 1.31,
+                            "iclo": 1.0
+                        },
+                        "Right Upper Arm": {
+                            "fclo": 1.31,
+                            "iclo": 1.0
+                        },
+                        "Left Lower Arm": {
+                            "fclo": 1.31,
+                            "iclo": 1.0
+                        },
+                        "Right Lower Arm": {
+                            "fclo": 1.31,
+                            "iclo": 1.0
+                        },
+                        "Left Hand": {
+                            "fclo": 1.31,
+                            "iclo": 1.0
+                        },
+                        "Right Hand": {
+                            "fclo": 1.31,
+                            "iclo": 1.0
+                        },
+                        "Left Thigh": {
+                            "fclo": 1.31,
+                            "iclo": 1.0
+                        },
+                        "Right Thigh": {
+                            "fclo": 1.31,
+                            "iclo": 1.0
+                        },
+                        "Left Lower Leg": {
+                            "fclo": 1.31,
+                            "iclo": 1.0
+                        },
+                        "Right Lower Leg": {
+                            "fclo": 1.31,
+                            "iclo": 1.0
+                        },
+                        "Left Foot": {
+                            "fclo": 1.31,
+                            "iclo": 1.0
+                        },
+                        "Right Foot": {
+                            "fclo": 1.31,
+                            "iclo": 1.0
+                        }
+                    }
+                }]
+            },
+            "examples": [
+                [{
+                    "ensemble_name": "changing clo value",
+                    "description": "the values are changed based on the input conditions",
+                    "segment_data": {
+                        "Head": {
+                            "fclo": 1.31,
+                            "iclo": 1.0
+                        },
+                        "Chest": {
+                            "fclo": 1.31,
+                            "iclo": 1.0
+                        },
+                        "Back": {
+                            "fclo": 1.31,
+                            "iclo": 1.0
+                        },
+                        "Pelvis": {
+                            "fclo": 1.31,
+                            "iclo": 1.0
+                        },
+                        "Left Upper Arm": {
+                            "fclo": 1.31,
+                            "iclo": 1.0
+                        },
+                        "Right Upper Arm": {
+                            "fclo": 1.31,
+                            "iclo": 1.0
+                        },
+                        "Left Lower Arm": {
+                            "fclo": 1.31,
+                            "iclo": 1.0
+                        },
+                        "Right Lower Arm": {
+                            "fclo": 1.31,
+                            "iclo": 1.0
+                        },
+                        "Left Hand": {
+                            "fclo": 1.31,
+                            "iclo": 1.0
+                        },
+                        "Right Hand": {
+                            "fclo": 1.31,
+                            "iclo": 1.0
+                        },
+                        "Left Thigh": {
+                            "fclo": 1.31,
+                            "iclo": 1.0
+                        },
+                        "Right Thigh": {
+                            "fclo": 1.31,
+                            "iclo": 1.0
+                        },
+                        "Left Lower Leg": {
+                            "fclo": 1.31,
+                            "iclo": 1.0
+                        },
+                        "Right Lower Leg": {
+                            "fclo": 1.31,
+                            "iclo": 1.0
+                        },
+                        "Left Foot": {
+                            "fclo": 1.31,
+                            "iclo": 1.0
+                        },
+                        "Right Foot": {
+                            "fclo": 1.31,
+                            "iclo": 1.0
+                        }
+                    }
+                }]
+            ]
+        },
+        "bodybuilder": {
+            "type": "object",
+            "default": {},
+            "title": "The bodybuilder Schema",
+            "required": [
+                "height",
+                "weight",
+                "age",
+                "gender",
+                "body_fat"
+            ],
+            "properties": {
+                "height": {
+                    "type": "number",
+                    "default": 0.0,
+                    "title": "The height Schema",
+                    "examples": [
+                        1.8
+                    ]
+                },
+                "weight": {
+                    "type": "number",
+                    "default": 0.0,
+                    "title": "The weight Schema",
+                    "examples": [
+                        70.4
+                    ]
+                },
+                "age": {
+                    "type": "integer",
+                    "default": 0,
+                    "title": "The age Schema",
+                    "examples": [
+                        25
+                    ]
+                },
+                "gender": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The gender Schema",
+                    "examples": [
+                        "male"
+                    ]
+                },
+                "body_fat": {
+                    "type": "number",
+                    "default": 0.0,
+                    "title": "The body_fat Schema",
+                    "examples": [
+                        0.15
+                    ]
+                }
+            },
+            "examples": [{
+                "height": 1.8,
+                "weight": 70.4,
+                "age": 25,
+                "gender": "male",
+                "body_fat": 0.15
+            }]
+        },
+        "id": {
+            "type": "integer",
+            "default": 0,
+            "title": "The id Schema",
+            "examples": [
+                44
+            ]
+        },
+        "phases": {
+            "type": "array",
+            "default": [],
+            "title": "The phases Schema",
+            "items": {
+                "type": "object",
+                "default": {},
+                "title": "A Schema",
+                "required": [
+                    "start_time",
+                    "ramp",
+                    "end_time",
+                    "time_units",
+                    "met_activity_name",
+                    "met",
+                    "default_data",
+                    "clo_ensemble_name"
+                ],
+                "properties": {
+                    "start_time": {
+                        "type": "integer",
+                        "default": 0,
+                        "title": "The start_time Schema",
+                        "examples": [
+                            0
+                        ]
+                    },
+                    "ramp": {
+                        "type": "boolean",
+                        "default": false,
+                        "title": "The ramp Schema",
+                        "examples": [
+                            false
+                        ]
+                    },
+                    "end_time": {
+                        "type": "integer",
+                        "default": 0,
+                        "title": "The end_time Schema",
+                        "examples": [
+                            3
+                        ]
+                    },
+                    "time_units": {
+                        "type": "string",
+                        "default": "",
+                        "title": "The time_units Schema",
+                        "examples": [
+                            "hours"
+                        ]
+                    },
+                    "met_activity_name": {
+                        "type": "string",
+                        "default": "",
+                        "title": "The met_activity_name Schema",
+                        "examples": [
+                            "Seated"
+                        ]
+                    },
+                    "met": {
+                        "type": "number",
+                        "default": 0.0,
+                        "title": "The met Schema",
+                        "examples": [
+                            1.0
+                        ]
+                    },
+                    "default_data": {
+                        "type": "object",
+                        "default": {},
+                        "title": "The default_data Schema",
+                        "required": [
+                            "rh",
+                            "v",
+                            "solar",
+                            "ta",
+                            "mrt"
+                        ],
+                        "properties": {
+                            "rh": {
+                                "type": "number",
+                                "default": 0.0,
+                                "title": "The rh Schema",
+                                "examples": [
+                                    0.5
+                                ]
+                            },
+                            "v": {
+                                "type": "number",
+                                "default": 0.0,
+                                "title": "The v Schema",
+                                "examples": [
+                                    0.1
+                                ]
+                            },
+                            "solar": {
+                                "type": "number",
+                                "default": 0.0,
+                                "title": "The solar Schema",
+                                "examples": [
+                                    0.0
+                                ]
+                            },
+                            "ta": {
+                                "type": "number",
+                                "default": 0.0,
+                                "title": "The ta Schema",
+                                "examples": [
+                                    32.2
+                                ]
+                            },
+                            "mrt": {
+                                "type": "number",
+                                "default": 0.0,
+                                "title": "The mrt Schema",
+                                "examples": [
+                                    32.2
+                                ]
+                            }
+                        },
+                        "examples": [{
+                            "rh": 0.5,
+                            "v": 0.1,
+                            "solar": 0.0,
+                            "ta": 32.2,
+                            "mrt": 32.2
+                        }]
+                    },
+                    "clo_ensemble_name": {
+                        "type": "string",
+                        "default": "",
+                        "title": "The clo_ensemble_name Schema",
+                        "examples": [
+                            "changing clo value"
+                        ]
+                    }
+                },
+                "examples": [{
+                    "start_time": 0,
+                    "ramp": false,
+                    "end_time": 3,
+                    "time_units": "hours",
+                    "met_activity_name": "Seated",
+                    "met": 1.0,
+                    "default_data": {
+                        "rh": 0.5,
+                        "v": 0.1,
+                        "solar": 0.0,
+                        "ta": 32.2,
+                        "mrt": 32.2
+                    },
+                    "clo_ensemble_name": "changing clo value"
+                }]
+            },
+            "examples": [
+                [{
+                    "start_time": 0,
+                    "ramp": false,
+                    "end_time": 3,
+                    "time_units": "hours",
+                    "met_activity_name": "Seated",
+                    "met": 1.0,
+                    "default_data": {
+                        "rh": 0.5,
+                        "v": 0.1,
+                        "solar": 0.0,
+                        "ta": 32.2,
+                        "mrt": 32.2
+                    },
+                    "clo_ensemble_name": "changing clo value"
+                }]
+            ]
+        }
+    },
+    "examples": [{
+        "name": "AB209",
+        "description": "This is a file for AB209 project.",
+        "reference_time": "2024-02-07T02:31:28",
+        "output_freq": 60,
+        "options": {
+            "csvOutput": false,
+            "sensation_adaptation": false,
+            "sensation_coredTdt": false
+        },
+        "comfort_model": {
+            "overall_sensation_model": "original",
+            "local_sensation_model": "original",
+            "overall_comfort_model": "original",
+            "local_comfort_model": "original"
+        },
+        "clothing": [{
+            "ensemble_name": "changing clo value",
+            "description": "the values are changed based on the input conditions",
+            "segment_data": {
+                "Head": {
+                    "fclo": 1.31,
+                    "iclo": 1.0
+                },
+                "Chest": {
+                    "fclo": 1.31,
+                    "iclo": 1.0
+                },
+                "Back": {
+                    "fclo": 1.31,
+                    "iclo": 1.0
+                },
+                "Pelvis": {
+                    "fclo": 1.31,
+                    "iclo": 1.0
+                },
+                "Left Upper Arm": {
+                    "fclo": 1.31,
+                    "iclo": 1.0
+                },
+                "Right Upper Arm": {
+                    "fclo": 1.31,
+                    "iclo": 1.0
+                },
+                "Left Lower Arm": {
+                    "fclo": 1.31,
+                    "iclo": 1.0
+                },
+                "Right Lower Arm": {
+                    "fclo": 1.31,
+                    "iclo": 1.0
+                },
+                "Left Hand": {
+                    "fclo": 1.31,
+                    "iclo": 1.0
+                },
+                "Right Hand": {
+                    "fclo": 1.31,
+                    "iclo": 1.0
+                },
+                "Left Thigh": {
+                    "fclo": 1.31,
+                    "iclo": 1.0
+                },
+                "Right Thigh": {
+                    "fclo": 1.31,
+                    "iclo": 1.0
+                },
+                "Left Lower Leg": {
+                    "fclo": 1.31,
+                    "iclo": 1.0
+                },
+                "Right Lower Leg": {
+                    "fclo": 1.31,
+                    "iclo": 1.0
+                },
+                "Left Foot": {
+                    "fclo": 1.31,
+                    "iclo": 1.0
+                },
+                "Right Foot": {
+                    "fclo": 1.31,
+                    "iclo": 1.0
+                }
+            }
+        }],
+        "bodybuilder": {
+            "height": 1.8,
+            "weight": 70.4,
+            "age": 25,
+            "gender": "male",
+            "body_fat": 0.15
+        },
+        "id": 44,
+        "phases": [{
+            "start_time": 0,
+            "ramp": false,
+            "end_time": 3,
+            "time_units": "hours",
+            "met_activity_name": "Seated",
+            "met": 1.0,
+            "default_data": {
+                "rh": 0.5,
+                "v": 0.1,
+                "solar": 0.0,
+                "ta": 32.2,
+                "mrt": 32.2
+            },
+            "clo_ensemble_name": "changing clo value"
+        }]
+    }]
+}

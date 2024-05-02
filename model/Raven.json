@@ -1,0 +1,78 @@
+{
+  "name": "Raven Test",
+  "description": "",
+  "reference_time": "2021-02-23T09:40:16",
+  "output_freq": 600,
+  "options": {
+    "csvOutput": true,
+    "sensation_adaptation": false,
+    "sensation_coredTdt": false,
+    "ignore_segments": true,
+    "ignore_physiology": true
+  },
+  "bodybuilder": {
+    "height": 1.8,
+    "weight": 74,
+    "age": 55,
+    "body_fat": 0.14,
+    "gender": "male",
+    "skin_color": "white",
+
+    "bloodFlow_factor": 1,
+    "skinBloodFlow_factor": 1,
+    "conductance_factor": 1,
+    "capacitance_factor": 1
+
+  },
+  "phases": [
+    {
+      "start_time": 0,
+      "end_time": 30,
+      "time_units": "minutes",
+      "default_data": {
+        "ta": 30,
+        "rh": 0.45,
+        "mrt": 30,
+        "v": 0.1,
+        "iclo": 0,
+        "fclo": 1,
+        "solar": 0.0,
+        "nude_fraction": 1,
+        "clothed_fraction": 0,
+        "nude_contact_fraction": 0,
+        "clothed_contact_fraction": 0,
+        "mrt_emis": 0.9,
+        "clo_emis": 0.9
+      },
+      "ramp": false,
+      "met": 0.8,
+      "clo_ensemble_name": "Nude",
+      "met_activity_name": null,
+      "segment_data": {}
+    },
+    {
+      "start_time": 30,
+      "end_time": 120,
+      "time_units": "minutes",
+      "default_data": {
+        "ta": 4.7,
+        "rh": 0.75,
+        "mrt": 4.7,
+        "v": 0.1,
+        "iclo": 0,
+        "fclo": 1,
+        "solar": 0.0,
+        "nude_fraction": 1,
+        "clothed_fraction": 0,
+        "nude_contact_fraction": 0,
+        "clothed_contact_fraction": 0
+      },
+      "ramp": false,
+      "met": 0.8,
+      "clo_ensemble_name": "Nude",
+      "met_activity_name": null,
+      "segment_data": {}
+    }
+
+  ]
+}
