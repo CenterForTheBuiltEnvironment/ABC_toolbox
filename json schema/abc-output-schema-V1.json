@@ -1,0 +1,275 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "definitions": {
+    "resultProperties": {
+      "type": "object",
+      "properties": {
+        "comfort": {
+          "type": "number",
+          "description": "Thermal comfort. -4: Very uncomfortable, -2: uncomfortable, -0: XXX,  unit: dimensionless"
+        },
+        "comfort_weighted": {
+          "type": "number",
+          "description": "Weighted comfort score considering different factors."
+        },
+        "sensation": {
+          "type": "number",
+          "description": "Thermal sensation score."
+        },
+        "sensation_weighted": {
+          "type": "number",
+          "description": "Weighted thermal sensation score."
+        },
+        "tskin": {
+          "type": "number",
+          "description": "Skin temperature."
+        },
+        "tcore": {
+          "type": "number",
+          "description": "Core temperature."
+        },
+        "eht": {
+          "type": "number",
+          "description": "Effective heat transfer."
+        },
+        "ta": {
+          "type": "number",
+          "description": "Air temperature."
+        },
+        "rh": {
+          "type": "number",
+          "description": "Relative humidity."
+        },
+        "mrt": {
+          "type": "number",
+          "description": "Mean radiant temperature."
+        },
+        "v": {
+          "type": "number",
+          "description": "Air velocity."
+        },
+        "solar": {
+          "type": "number",
+          "description": "Solar radiation."
+        },
+        "q_met": {
+          "type": "number",
+          "description": "Metabolic heat production."
+        },
+        "q_conv": {
+          "type": "number",
+          "description": "Convective heat loss."
+        },
+        "q_rad": {
+          "type": "number",
+          "description": "Radiative heat loss."
+        },
+        "q_solar": {
+          "type": "number",
+          "description": "Heat gain from solar radiation."
+        },
+        "q_resp": {
+          "type": "number",
+          "description": "Respiratory heat loss."
+        },
+        "q_sweat": {
+          "type": "number",
+          "description": "Sweat evaporation heat loss."
+        },
+        "w": {
+          "type": "number",
+          "description": "Total skin wettedness."
+        }
+      }
+    }
+  },
+  "properties": {
+    "id": {
+      "type": "integer",
+      "description": "Unique identifier for the simulation.",
+      "examples": [
+        1
+      ]
+    },
+    "name": {
+      "type": "string",
+      "description": "Name of the simulation."
+    },
+    "description": {
+      "type": "string",
+      "description": "Description of the simulation's purpose and setup."
+    },
+    "reference_time": {
+      "type": "string",
+      "description": "Timestamp for when the simulation results were generated, in ISO 8601 format."
+    },
+    "output_freq": {
+      "type": "integer",
+      "description": "Frequency at which data is output during the simulation, measured in seconds."
+    },
+    "comfort_model": {
+      "type": "object",
+      "description": "Configuration of the models used to assess comfort and sensation.",
+      "properties": {
+        "overall_sensation_model": {
+          "type": "string",
+          "description": "Model used for assessing overall sensation.",
+          "default": "original",
+          "enum": [
+            "original",
+            "weighted"
+          ]
+        },
+        "local_sensation_model": {
+          "type": "string",
+          "description": "Model for assessing local sensation.",
+          "default": "original",
+          "enum": [
+            "original",
+            "weighted"
+          ]
+        },
+        "overall_comfort_model": {
+          "type": "string",
+          "description": "Model for evaluating overall comfort.",
+          "default": "original",
+          "enum": [
+            "original",
+            "weighted"
+          ]
+        },
+        "local_comfort_model": {
+          "type": "string",
+          "description": "Model for evaluating local comfort.",
+          "default": "original",
+          "enum": [
+            "original",
+            "weighted"
+          ]
+        },
+        "segment_data": {
+          "type": "object",
+          "description": "Detailed parameters for each body segment influencing the comfort and sensation models.",
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "C1_LTZero": {
+                "type": "number",
+                "description": "Static regression coefficient for local thermal sensation prediction model when skin temperature is lower than set-point (slope of logistic curve)."
+              },
+              "C1_GEZero": {
+                "type": "number",
+                "description": "Static regression coefficient for local thermal sensation prediction model when skin temperature is higher than set-point (slope of logistic curve)."
+              },
+              "K1_LTZero": {
+                "type": "number",
+                "description": "Factor for effect of whole-body temperature on local thermal sensation when skin temperature is lower than set-point."
+              },
+              "K1_GEZero": {
+                "type": "number",
+                "description": "Factor for effect of whole-body temperature on local thermal sensation when skin temperature is higher than set-point."
+              },
+              "C2_LTZero": {
+                "type": "number",
+                "description": "Dynamic regression coefficient of the local thermal sensation prediction model when skin temperature is lower than the set temperature."
+              },
+              "C2_GEZero": {
+                "type": "number",
+                "description": "Dynamic regression coefficient of the local thermal sensation prediction model when skin temperature is higher than set-point."
+              },
+              "C3": {
+                "type": "number",
+                "description": "Dynamic regression coefficient of the local thermal sensation prediction model when core temperature changes."
+              },
+              "C31": {
+                "type": "number",
+                "description": "Regression coefficient of the local thermal comfort prediction."
+              },
+              "C32": {
+                "type": "number",
+                "description": "Regression coefficient of the local thermal comfort prediction."
+              },
+              "C6": {
+                "type": "number",
+                "description": "Regression coefficient of the local thermal comfort prediction."
+              },
+              "C8": {
+                "type": "number",
+                "description": "Regression coefficient of the local thermal comfort prediction."
+              },
+              "C71": {
+                "type": "number",
+                "description": "Regression coefficient of the local thermal comfort prediction."
+              },
+              "C72": {
+                "type": "number",
+                "description": "Regression coefficient of the local thermal comfort prediction."
+              },
+              "TSL": {
+                "type": "number",
+                "description": "[???]"
+              },
+              "adaptationDeadband_negative": {
+                "type": "number",
+                "description": "[???] Negative range for adaptation deadband."
+              },
+              "adaptationDeadband_positive": {
+                "type": "number",
+                "description": "[???] Positive range for adaptation deadband."
+              },
+              "local_sensation_dominant_weight": {
+                "type": "number",
+                "description": "[???] Weight for local sensation in the overall comfort model."
+              }
+            }
+          }
+        }
+      }
+    },
+    "results": {
+      "type": "array",
+      "description": "Array of simulation results",
+      "properties": {
+        "time": {
+          "type": "integer",
+          "description": "Simulation time at which the results were recorded, in seconds."
+        },
+        "met": {
+          "type": "number",
+          "description": "Metabolic rate at the recorded time, measured in met units."
+        },
+        "clo_ensemble_name": {
+          "type": "string",
+          "description": "Name of the clothing ensemble used during the simulation at this time."
+        },
+        "clo": {
+          "type": "number",
+          "description": "Clothing insulation value at the recorded time."
+        },
+        "overall": {
+          "$ref": "#/definitions/resultProperties"
+        },
+        "segments": {
+          "type": "object",
+          "description": "Detailed segment-specific results for each body part.",
+          "additionalProperties": {
+            "$ref": "#/definitions/resultProperties"
+          }
+        }
+      }
+    },
+    "simulation_version": {
+      "type": "number",
+      "description": "Version number of the simulation software."
+    },
+    "simulation_version_date": {
+      "type": "string",
+      "description": "Release date of the simulation software version."
+    },
+    "state": {
+      "type": "object",
+      "description": "Final state of the simulation, including temperatures and other state variables for each body segment."
+    }
+  }
+}
