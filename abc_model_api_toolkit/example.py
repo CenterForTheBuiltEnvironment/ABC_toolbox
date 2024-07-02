@@ -12,7 +12,7 @@ def main(
 
 if __name__ == '__main__':
     main(
-    input_json_file = r'C:\Users\monyo\PycharmProjects\ABC_JSON_schema\test\abc_function_test_ramp.json',
-    output_json_file = r'C:\Users\monyo\PycharmProjects\ABC_JSON_schema\test\abc_function_test_ramp_output.json',
-    output_csv_file = r'C:\Users\monyo\PycharmProjects\ABC_JSON_schema\test\abc_function_test_ramp_output.csv',
+    input_json_file =r'/test/abc_function_test_ramp.json',
+    output_json_file =r'/test/abc_function_test_ramp_output.json',
+    output_csv_file =r'/test/abc_function_test_ramp_output.csv',
 )
