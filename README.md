@@ -1,4 +1,4 @@
-# JSON schema for ABC model
+# ABC model toolbox
 Useful toolbox for the Advanced Berkeley Comfort (ABC) model
 
 ## Toolkit
