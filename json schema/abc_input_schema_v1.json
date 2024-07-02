@@ -1,0 +1,566 @@
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "Schema for ABC model input JSON, Version 1",
+  "definitions": {
+    "environmentalConditions": {
+      "type": "object",
+      "required": [
+        "ta",
+        "rh",
+        "mrt",
+        "v"
+      ],
+      "properties": {
+        "mrt": {
+          "type": "number",
+          "description": "Mean radiant temperature. Unit: °C",
+          "minimum": 0,
+          "maximum": 50,
+          "default": 25
+        },
+        "rh": {
+          "type": "number",
+          "description": "Relative humidity. Unit: fraction",
+          "minimum": 0.0,
+          "maximum": 1.0,
+          "default": 0.5
+        },
+        "solar": {
+          "type": "number",
+          "description": "Solar flux. Unit: W/m2",
+          "minimum": 0,
+          "maximum": 10000,
+          "default": 0
+        },
+        "ta": {
+          "type": "number",
+          "description": "Dry bulb air temperature. Unit: °C",
+          "minimum": 0,
+          "maximum": 50,
+          "default": 25
+        },
+        "v": {
+          "type": "number",
+          "description": "Air velocity. Unit: m/s",
+          "minimum": 0.0,
+          "maximum": 20,
+          "default": 0.1
+        }
+      }
+    },
+    "clothingParameters": {
+      "type": "object",
+      "required": [
+        "fclo",
+        "iclo"
+      ],
+      "properties": {
+        "fclo": {
+          "type": "number",
+          "description": "Clothing area factor. Unit: fraction",
+          "minimum": 0
+        },
+        "iclo": {
+          "type": "number",
+          "description": "Clothing thermal insulation. Unit: clo (1 clo = 1/0.155 W/m2K)",
+          "minimum": 0
+        }
+      }
+    }
+  },
+  "properties": {
+    "id": {
+      "type": "integer",
+      "description": "Unique identifier for the simulation",
+      "examples": [
+        1
+      ]
+    },
+    "name": {
+      "type": "string",
+      "description": "Name of the simulation",
+      "default": "",
+      "examples": [
+        "Sample"
+      ]
+    },
+    "description": {
+      "type": "string",
+      "description": "Detailed description of the simulation",
+      "default": "",
+      "examples": [
+        "This is an input file for a sample project."
+      ]
+    },
+    "bodybuilder": {
+      "type": "object",
+      "description": "Body to be simulated. This function customizes  the geometry and physiology of the human being modeled based on simple input parameters (such as height, weight, age, gender and so on) to better account for individual differences. See [the paper](https://doi.org/10.1016/S0306-4565(01)00051-1) for more details.",
+      "properties": {
+        "age": {
+          "type": "integer",
+          "description": "Age of the individual. Unit: years",
+          "minimum": 5,
+          "maximum": 100,
+          "default": 25
+        },
+        "body_fat": {
+          "type": "number",
+          "description": "Body fat percentage. Unit: fraction",
+          "minimum": 0.01,
+          "maximum": 0.7,
+          "default": 0.13
+        },
+        "gender": {
+          "type": "string",
+          "description": "Gender of the individual",
+          "default": "male",
+          "enum": [
+            "male",
+            "female"
+          ]
+        },
+        "height": {
+          "type": "number",
+          "description": "Height of the individual. Unit: m",
+          "minimum": 1,
+          "maximum": 3,
+          "default": 1.72
+        },
+        "weight": {
+          "type": "number",
+          "description": "Weight of the individual. Unit: kg",
+          "minimum": 25,
+          "maximum": 200,
+          "default": 74.4
+        },
+        "skin_color": {
+          "type": "string",
+          "description": "Skin color of the individual. The solar radiation absorption rate varies depending on this skin color setting. White skin absorbs 62%, brown skin absorbs 70%, and black skin absorbs 77%.",
+          "default": "brown",
+          "enum": [
+            "white",
+            "brown",
+            "black"
+          ]
+        },
+        "bloodFlow_factor": {
+          "type": "number",
+          "description": "[For researchers] A special additional multiplier for cardiac output. Unit: dimensionless",
+          "minimum": 0,
+          "maximum": 10,
+          "default": 1
+        },
+        "skinBloodFlow_factor": {
+          "type": "number",
+          "description": "[For researchers] A special additional multiplier for skin blood flow. Unit: dimensionless",
+          "minimum": 0,
+          "maximum": 10,
+          "default": 1
+        },
+        "conductance_factor": {
+          "type": "number",
+          "description": "[For researchers] A special additional multiplier for thermal conductance of the body. Unit: dimensionless",
+          "minimum": 0,
+          "maximum": 10,
+          "default": 1
+        },
+        "capacitance_factor": {
+          "type": "number",
+          "description": "[For researchers] A special additional multiplier for thermal capacity of the body. Unit: dimensionless",
+          "minimum": 0,
+          "maximum": 10,
+          "default": 1
+        }
+      },
+      "examples": [
+        {
+          "age": 25,
+          "body_fat": 0.15,
+          "gender": "male",
+          "height": 1.8,
+          "weight": 70.4,
+          "skin_color": "white"
+        }
+      ]
+    },
+    "clothing": {
+      "type": "array",
+      "description": "Array of clothing ensembles with specific insulation and area factor values for each body segment",
+      "default": [],
+      "items": {
+        "type": "object",
+        "required": [
+          "ensemble_name",
+          "segment_data"
+        ],
+        "properties": {
+          "ensemble_name": {
+            "type": "string",
+            "description": "Name of the clothing ensemble."
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of the clothing ensemble's use or conditions.",
+            "default": ""
+          },
+          "segment_data": {
+            "type": "object",
+            "description": "Local clothing insulation and area factor data for body segments.",
+            "required": [
+              "Head",
+              "Chest",
+              "Back",
+              "Pelvis",
+              "Left Upper Arm",
+              "Right Upper Arm",
+              "Left Lower Arm",
+              "Right Lower Arm",
+              "Left Hand",
+              "Right Hand",
+              "Left Thigh",
+              "Right Thigh",
+              "Left Lower Leg",
+              "Right Lower Leg",
+              "Left Foot",
+              "Right Foot"
+            ],
+            "properties": {
+              "Head": {
+                "type": "object",
+                "$ref": "#/definitions/clothingParameters",
+                "description": "Parameters for head clothing insulation and area factor."
+              },
+              "Chest": {
+                "type": "object",
+                "$ref": "#/definitions/clothingParameters",
+                "description": "Parameters for chest clothing insulation and area factor."
+              },
+              "Back": {
+                "type": "object",
+                "$ref": "#/definitions/clothingParameters",
+                "description": "Parameters for back clothing insulation and area factor."
+              },
+              "Pelvis": {
+                "type": "object",
+                "$ref": "#/definitions/clothingParameters",
+                "description": "Parameters for pelvis clothing insulation and area factor."
+              },
+              "Left Upper Arm": {
+                "type": "object",
+                "$ref": "#/definitions/clothingParameters",
+                "description": "Parameters for left upper arm clothing insulation and area factor."
+              },
+              "Right Upper Arm": {
+                "type": "object",
+                "$ref": "#/definitions/clothingParameters",
+                "description": "Parameters for right upper arm clothing insulation and area factor."
+              },
+              "Left Lower Arm": {
+                "type": "object",
+                "$ref": "#/definitions/clothingParameters",
+                "description": "Parameters for left lower arm clothing insulation and area factor."
+              },
+              "Right Lower Arm": {
+                "type": "object",
+                "$ref": "#/definitions/clothingParameters",
+                "description": "Parameters for right lower arm clothing insulation and area factor."
+              },
+              "Left Hand": {
+                "type": "object",
+                "$ref": "#/definitions/clothingParameters",
+                "description": "Parameters for left hand clothing insulation and area factor."
+              },
+              "Right Hand": {
+                "type": "object",
+                "$ref": "#/definitions/clothingParameters",
+                "description": "Parameters for right hand clothing insulation and area factor."
+              },
+              "Left Thigh": {
+                "type": "object",
+                "$ref": "#/definitions/clothingParameters",
+                "description": "Parameters for left thigh clothing insulation and area factor."
+              },
+              "Right Thigh": {
+                "type": "object",
+                "$ref": "#/definitions/clothingParameters",
+                "description": "Parameters for right thigh clothing insulation and area factor."
+              },
+              "Left Lower Leg": {
+                "type": "object",
+                "$ref": "#/definitions/clothingParameters",
+                "description": "Parameters for left lower leg clothing insulation and area factor."
+              },
+              "Right Lower Leg": {
+                "type": "object",
+                "$ref": "#/definitions/clothingParameters",
+                "description": "Parameters for right lower leg clothing insulation and area factor."
+              },
+              "Left Foot": {
+                "type": "object",
+                "$ref": "#/definitions/clothingParameters",
+                "description": "Parameters for left foot clothing insulation and area factor."
+              },
+              "Right Foot": {
+                "type": "object",
+                "$ref": "#/definitions/clothingParameters",
+                "description": "Parameters for right foot clothing insulation and area factor."
+              }
+            }
+          }
+        }
+      },
+      "examples": [
+        [
+          {
+            "ensemble_name": "sample clothing ensemble",
+            "description": "This is sample clothing ensemble data.",
+            "segment_data": {
+              "Head": {
+                "fclo": 1.1,
+                "iclo": 0.2
+              },
+              "Chest": {
+                "fclo": 1.1,
+                "iclo": 0.2
+              },
+              "Back": {
+                "fclo": 1.1,
+                "iclo": 0.2
+              },
+              "Pelvis": {
+                "fclo": 1.1,
+                "iclo": 0.2
+              },
+              "Left Upper Arm": {
+                "fclo": 1.1,
+                "iclo": 0.2
+              },
+              "Right Upper Arm": {
+                "fclo": 1.1,
+                "iclo": 0.2
+              },
+              "Left Lower Arm": {
+                "fclo": 1.1,
+                "iclo": 0.2
+              },
+              "Right Lower Arm": {
+                "fclo": 1.1,
+                "iclo": 0.2
+              },
+              "Left Hand": {
+                "fclo": 1.1,
+                "iclo": 0.2
+              },
+              "Right Hand": {
+                "fclo": 1.1,
+                "iclo": 0.2
+              },
+              "Left Thigh": {
+                "fclo": 1.1,
+                "iclo": 0.2
+              },
+              "Right Thigh": {
+                "fclo": 1.1,
+                "iclo": 0.2
+              },
+              "Left Lower Leg": {
+                "fclo": 1.1,
+                "iclo": 0.2
+              },
+              "Right Lower Leg": {
+                "fclo": 1.1,
+                "iclo": 0.2
+              },
+              "Left Foot": {
+                "fclo": 1.1,
+                "iclo": 0.2
+              },
+              "Right Foot": {
+                "fclo": 1.1,
+                "iclo": 0.2
+              }
+            }
+          }
+        ]
+      ]
+    },
+    "options": {
+      "type": "object",
+      "description": "Simulation options",
+      "properties": {
+        "csvOutput": {
+          "type": "boolean",
+          "description": "If true, generate CSV output file",
+          "default": false
+        },
+        "sensation_adaptation": {
+          "type": "boolean",
+          "description": "If true, use sensation adaptation model.",
+          "default": false
+        },
+        "sensation_coredTdt": {
+          "type": "boolean",
+          "description": "If true, use core temperature time derivative in sensation model. See [the paper](https://doi.org/10.1016/j.buildenv.2009.06.018) for more details.",
+          "default": false
+        },
+        "comfort_model": {
+          "type": "boolean",
+          "description": "[Mainly for developer] If true, run comfort model using skin temperature input. This option can be used when you have skin temperature data obtained from human subject experiments or thermal manikins and want to use them.",
+          "default": false
+        },
+        "comfort_setpoint_input": {
+          "type": "boolean",
+          "description": "[Mainly for developer] If true, read comfort setpoints from input.",
+          "default": false
+        },
+        "passive_comfort_setpoints": {
+          "type": "boolean",
+          "description": "[Mainly for developer] If true, disable regulatory model when calculating comfort setpoints",
+          "default": false
+        },
+        "transient_comfort_model": {
+          "type": "boolean",
+          "description": "If true, use comfort model for transient conditions. See [the paper](https://doi.org/10.1016/j.buildenv.2009.06.015) for more details.",
+          "default": false
+        },
+        "user_control_comfort_model": {
+          "type": "boolean",
+          "description": "If true, use comfort model for user controlled conditions. See [the paper](https://doi.org/10.1016/j.buildenv.2009.06.015) for more details.",
+          "default": false
+        }
+      },
+      "examples": [
+        {
+          "csvOutput": true,
+          "sensation_coredTdt": true
+        }
+      ]
+    },
+    "output_freq": {
+      "type": "integer",
+      "description": "Output frequency",
+      "unit": "seconds",
+      "minimum": 1,
+      "default": 60,
+      "examples": [
+        60
+      ]
+    },
+    "phases": {
+      "type": "array",
+      "description": "Array of conditions to be simulated",
+      "items": {
+        "type": "object",
+        "properties": {
+          "clo_ensemble_name": {
+            "type": "string",
+            "description": "Clothing ensemble name for this condition",
+            "default": ""
+          },
+          "default_data": {
+            "type": "object",
+            "description": "Default environmental conditions",
+            "$ref": "#/definitions/environmentalConditions"
+          },
+          "end_time": {
+            "type": "integer",
+            "description": "End time. Unit: time_units",
+            "minimum": 0
+          },
+          "met": {
+            "type": "number",
+            "description": "Metabolic rate. Unit: met",
+            "minimum": 0.7,
+            "maximum": 10,
+            "default": 1.0
+          },
+          "met_activity_name": {
+            "type": "string",
+            "description": "Metabolic activity name [currently not implemented]",
+            "default": ""
+          },
+          "ramp": {
+            "type": "boolean",
+            "description": "Linear ramp from previous condition",
+            "default": false
+          },
+          "start_time": {
+            "type": "integer",
+            "description": "Start time. Unit: time_units",
+            "minimum": 0
+          },
+          "time_units": {
+            "type": "string",
+            "description": "Time units for start and end times. Unit: seconds",
+            "default": "seconds",
+            "enum": [
+              "seconds",
+              "minutes",
+              "hours"
+            ]
+          },
+          "segment_data": {
+            "type": "object",
+            "description": "Specific environmental conditions for body segments",
+            "default": {},
+            "propertyNames": {
+              "enum": [
+                "Head",
+                "Chest",
+                "Back",
+                "Pelvis",
+                "Left Upper Arm",
+                "Left Lower Arm",
+                "Left Hand",
+                "Right Upper Arm",
+                "Right Lower Arm",
+                "Right Hand",
+                "Left Thigh",
+                "Left Lower Leg",
+                "Left Foot",
+                "Right Thigh",
+                "Right Lower Leg",
+                "Right Foot"
+              ],
+              "description": "Body segment names for environmental condition specification"
+            },
+            "additionalProperties": {
+              "$ref": "#/definitions/environmentalConditions"
+            }
+          }
+        },
+        "required": [
+          "clo_ensemble_name",
+          "default_data",
+          "end_time",
+          "met",
+          "start_time"
+        ]
+      },
+      "examples": [
+        [
+          {
+            "start_time": 0,
+            "ramp": false,
+            "end_time": 3,
+            "time_units": "hours",
+            "met_activity_name": "Seated",
+            "met": 1.0,
+            "default_data": {
+              "rh": 0.5,
+              "v": 0.1,
+              "solar": 0.0,
+              "ta": 24.0,
+              "mrt": 24.0
+            },
+            "clo_ensemble_name": "sample clothing ensemble"
+          }
+        ]
+      ]
+    }
+  },
+  "required": [
+    "phases"
+  ]
+}
