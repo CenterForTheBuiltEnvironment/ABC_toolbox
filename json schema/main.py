@@ -1,17 +1,27 @@
+import os
 import json
 import jsonschema2md
 from datetime import datetime
 
 # Constants for file paths
-BASE_PATH = "C:\\Users\\monyo\\PycharmProjects\\ABC_JSON_schema\\json schema\\"
+CURRENT_DIRECTORY = os.getcwd()
 INPUT_SCHEMA_FILE_NAME = "abc_input_schema_v1"
 OUTPUT_SCHEMA_FILE_NAME = "abc_output_schema_v1"
 
-INPUT_JSON_SCHEMA_FILE_PATH = f"{BASE_PATH}{INPUT_SCHEMA_FILE_NAME}.json"
-OUTPUT_JSON_SCHEMA_FILE_PATH = f"{BASE_PATH}{OUTPUT_SCHEMA_FILE_NAME}.json"
+INPUT_JSON_SCHEMA_FILE_PATH = (
+    f"{os.path.join(CURRENT_DIRECTORY, INPUT_SCHEMA_FILE_NAME)}.json"
+)
+OUTPUT_JSON_SCHEMA_FILE_PATH = (
+    f"{os.path.join(CURRENT_DIRECTORY, OUTPUT_SCHEMA_FILE_NAME)}.json"
+)
 
-INPUT_MARKDOWN_FILE_PATH = f"{BASE_PATH}{INPUT_SCHEMA_FILE_NAME}.markdown"
-OUTPUT_MARKDOWN_FILE_PATH = f"{BASE_PATH}{OUTPUT_SCHEMA_FILE_NAME}.markdown"
+INPUT_MARKDOWN_FILE_PATH = (
+    f"{os.path.join(CURRENT_DIRECTORY, INPUT_SCHEMA_FILE_NAME)}.markdown"
+)
+OUTPUT_MARKDOWN_FILE_PATH = (
+    f"{os.path.join(CURRENT_DIRECTORY, OUTPUT_SCHEMA_FILE_NAME)}.markdown"
+)
+
 
 def save_schema_as_markdown(json_file_path, markdown_file_path):
     """
@@ -35,10 +45,16 @@ def save_schema_as_markdown(json_file_path, markdown_file_path):
 
     with open(markdown_file_path, "w") as md_file:
         markdown_content = parser.parse_schema(schema)
-        md_file.write(''.join(markdown_content))
+        md_file.write("".join(markdown_content))
         print(f"Markdown content successfully written to {markdown_file_path}")
 
 
-# Convert both input and output JSON schemas to Markdown
-save_schema_as_markdown(json_file_path=INPUT_JSON_SCHEMA_FILE_PATH, markdown_file_path=INPUT_MARKDOWN_FILE_PATH)
-save_schema_as_markdown(json_file_path=OUTPUT_JSON_SCHEMA_FILE_PATH, markdown_file_path=OUTPUT_MARKDOWN_FILE_PATH)
+if __name__ == "__main__":
+    save_schema_as_markdown(
+        json_file_path=INPUT_JSON_SCHEMA_FILE_PATH,
+        markdown_file_path=INPUT_MARKDOWN_FILE_PATH,
+    )
+    save_schema_as_markdown(
+        json_file_path=OUTPUT_JSON_SCHEMA_FILE_PATH,
+        markdown_file_path=OUTPUT_MARKDOWN_FILE_PATH,
+    )
