@@ -1,4 +1,4 @@
-# json_schema
+# abc_model_json_schema_toolkit
 This folder contains a Python script that converts JSON schema files into Markdown format. 
 The generated Markdown files are used for the input and output sections in the official documentation.
 
