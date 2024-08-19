@@ -1,4 +1,4 @@
-from abc_model_api_client import call_abc_model_api
+from api_client import call_abc_model_api
 from data_processor import output_json_to_csv
 
 def main(
