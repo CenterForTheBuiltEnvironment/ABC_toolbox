@@ -14,6 +14,8 @@ abc_model_api_toolkit/
 ```
 
 ## Installation
+Try cloning and use the related package.
 ```sh
-pip install abc_model_api_toolkit
+!git clone https://github.com/CenterForTheBuiltEnvironment/ABC_toolbox.git
+```
 
