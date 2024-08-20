@@ -2,19 +2,17 @@
 
 {% tabs %}
 {% tab title="Overview" %}
-## abc\_model\_api\_toolkit: A Python script for ABC model API interaction
+We provide _abc\_model\_api\_toolkit_ to easily use ABC model API and also give you an example Python script using this toolkit.&#x20;
 
-We provide an example Python script to use ABC model API for more advanced simulation.&#x20;
+For more details, visit the [abc\_model\_api\_toolkit GitHub repository](https://github.com/CenterForTheBuiltEnvironment/ABC\_toolbox/tree/main/abc\_model\_api\_toolkit) and review the README file.
 
-This is the link to abc\_model\_api\_toolkit and please see the README file for more details:[https://github.com/CenterForTheBuiltEnvironment/ABC\_toolbox/tree/main/abc\_model\_api\_toolki](https://github.com/CenterForTheBuiltEnvironment/ABC\_toolbox/tree/main/abc\_model\_api\_toolkit)
-
-### Installation
+**Installation**
 
 ```sh
 !git clone https://github.com/CenterForTheBuiltEnvironment/ABC_toolbox.git
 ```
 
-### Discrepancies
+**Discrepancies**
 
 * Python 3
 * Standard libraries:
