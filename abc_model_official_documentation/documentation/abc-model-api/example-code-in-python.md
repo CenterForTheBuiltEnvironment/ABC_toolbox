@@ -1,7 +1,5 @@
 # Example code in Python
 
-{% @github-files/github-code-block url="https://github.com/CenterForTheBuiltEnvironment/ABC_toolbox/blob/main/abc_model_official_documentation/code/example_local_comfort_equation.py" %}
-
 {% tabs %}
 {% tab title="Overview" %}
 #### Python Script for API Interaction Using your JSON file
@@ -135,5 +133,3 @@ if __name__ == '__main__':
 We provide a Python script to interact with ABC model API by sending your JSON input file and handling responses. Please visit this GitHub repository.
 
 {% embed url="https://vimeo.com/943333333" %}
-
-{% @github-files/github-code-block url="https://github.com/CenterForTheBuiltEnvironment/ABC_toolbox/blob/main/abc_model_api_toolkit/example/Example_ABC_model_API_in_Python.ipynb" %}
