@@ -9,6 +9,10 @@ This page includes:
 * **Idea Sharing**: Share your ideas on how to improve the ABC model or web interface.
 * **Q\&A**: Post your questions here. We will answer them as soon as possible.
 
+{% @github-files/github-code-block url="https://github.com/CenterForTheBuiltEnvironment/pythermalcomfort" %}
+
+{% @github-files/github-code-block url="https://github.com/CenterForTheBuiltEnvironment/ABCWeb/discussions" %}
+
 {% @github-files/github-code-block url="https://github.com/CenterForTheBuiltEnvironment/ABCWeb/discussions" %}
 
 ## How to ask questions
