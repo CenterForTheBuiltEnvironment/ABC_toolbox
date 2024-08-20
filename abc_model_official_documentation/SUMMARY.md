@@ -26,6 +26,7 @@
 ## References
 
 * [References](references/references.md)
+* [Past presentation](references/past-presentation.md)
 * [Online JSON Viewer](references/online-json-viewer.md)
 
 ## Changelog
