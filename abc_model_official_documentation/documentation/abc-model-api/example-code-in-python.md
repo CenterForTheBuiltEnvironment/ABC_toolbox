@@ -1,5 +1,7 @@
 # Example code in Python
 
+{% @github-files/github-code-block %}
+
 {% tabs %}
 {% tab title="Overview" %}
 #### Python Script for API Interaction Using your JSON file
