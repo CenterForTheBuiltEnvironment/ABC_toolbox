@@ -13,7 +13,6 @@
 * [ABC Model API](documentation/abc-model-api/README.md)
   * [Example code in Python](documentation/abc-model-api/example-code-in-python.md)
   * [Example code in R](documentation/abc-model-api/example-code-in-r.md)
-  * [Example code in JavaScript](documentation/abc-model-api/example-code-in-javascript.md)
 * [Web interface](documentation/web-interface/README.md)
   * [Edit input data](documentation/web-interface/edit-input-data.md)
   * [File import and export](documentation/web-interface/file-import-and-export.md)

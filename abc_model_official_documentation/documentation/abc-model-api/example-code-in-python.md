@@ -2,7 +2,7 @@
 
 {% tabs %}
 {% tab title="Overview" %}
-We provide _abc\_model\_api\_toolkit_ to easily use ABC model API and also give you an example Python script using this toolkit.&#x20;
+We provide _**abc\_model\_api\_toolkit**_ to easily use ABC model API and also give you an example Python script using this toolkit.&#x20;
 
 For more details, visit the [abc\_model\_api\_toolkit GitHub repository](https://github.com/CenterForTheBuiltEnvironment/ABC\_toolbox/tree/main/abc\_model\_api\_toolkit) and review the README file.
 
