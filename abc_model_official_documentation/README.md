@@ -6,23 +6,11 @@ description: Official documentation webpage
 
 The Advanced Berkeley Comfort (ABC) model, originally developed by the Building Sciences Group at UCB for the evaluation of human comfort in automobiles, is one of the most sophisticated thermal comfort models in existence. The comfort models for local body parts and body overall are based on intensive human subject tests carried out at CBE environmental chamber. So far, these are the only models available which predict comfort for local body parts, therefore a good model to predict comfort under non-uniform environments.&#x20;
 
-## Let's get started
+## Web interface
 
-Let's quickly dive into and explore the live deployment of our current web interface for the ABC model. For additional information about the web interface, [here](documentation/web-interface/) is the documentation for the web interface.
+Let's quickly dive into and explore [the live deployment of our current web interface for the ABC model](https://clownfish-app-wxmgi.ondigitalocean.app/). For additional information about the web interface, [here](documentation/web-interface/) is the documentation for the web interface.
 
-<table data-card-size="large" data-view="cards" data-full-width="true"><thead><tr><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td>ABC Web interface</td><td><a href=".gitbook/assets/image (78).png">image (78).png</a></td><td><a href="documentation/abc-model-api/example-code-in-python.md">example-code-in-python.md</a></td></tr></tbody></table>
-
-## Fundings
-
-<figure><img src=".gitbook/assets/image (78).png" alt=""><figcaption><p>aaa</p></figcaption></figure>
-
-{% embed url="https://clownfish-app-wxmgi.ondigitalocean.app/" %}
-Link to Web-interface for ABC model
-{% endembed %}
-
-{% embed url="https://vimeo.com/943333333" %}
-Test: Example video
-{% endembed %}
+<figure><img src=".gitbook/assets/image (78).png" alt=""><figcaption></figcaption></figure>
 
 ## Run the model in your favorite programming language
 
