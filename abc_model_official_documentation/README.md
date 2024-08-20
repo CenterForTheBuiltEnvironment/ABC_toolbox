@@ -10,6 +10,10 @@ The Advanced Berkeley Comfort (ABC) model, originally developed by the Building 
 
 Let's quickly dive into and explore the live deployment of our current web interface for the ABC model. For additional information about the web interface, [here](documentation/web-interface/) is the documentation for the web interface.
 
+**Click your language of choice below for more information.**
+
+<table data-card-size="large" data-view="cards" data-full-width="true"><thead><tr><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td>ABC model for Python</td><td><a href=".gitbook/assets/logo_Python_gradual_background.png">logo_Python_gradual_background.png</a></td><td><a href="documentation/abc-model-api/example-code-in-python.md">example-code-in-python.md</a></td></tr><tr><td>ABC model for R</td><td><a href=".gitbook/assets/logo_R_gradual_background.png">logo_R_gradual_background.png</a></td><td><a href="documentation/abc-model-api/example-code-in-r.md">example-code-in-r.md</a></td></tr></tbody></table>
+
 <figure><img src=".gitbook/assets/image (78).png" alt=""><figcaption><p>aaa</p></figcaption></figure>
 
 {% embed url="https://clownfish-app-wxmgi.ondigitalocean.app/" %}
