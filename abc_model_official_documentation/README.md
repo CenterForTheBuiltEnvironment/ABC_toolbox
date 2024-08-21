@@ -14,7 +14,7 @@ Let's quickly dive into and explore [the live deployment of our current web inte
 
 ## Run the model in your favorite programming language
 
-We offer an official API (ABC model API) with example code written in several popular programming languages and recommend using this API for those who want to run the model programmatically for advanced simulations beyond the capabilities of the web interface. You can also create powerful, custom integrations that enhance your own applications by leveraging our model's capabilities.
+We offer an official API (ABC model API) with example code written in several popular programming languages. We recommend using this API for those who want to run the model programmatically for advanced simulations beyond the capabilities of the web interface. You can also create powerful, custom integrations that enhance your own applications by leveraging our model's capabilities.
 
 **Click your language of choice below for more information.**
 
