@@ -65,9 +65,9 @@ where:&#x20;
 
 This model predicts local thermal comfort ($$Comfort_{local}$$) based on local thermal sensation ($$𝑆_{local}$$) calculated above and the figure below shows the schematic diagram.&#x20;
 
-Basically, the thermal sensation of a body part is most comfortable when it is neutral, and discomfort increases as it deviates from neutrality. The figure illustrates how local thermal comfort is influenced by overall thermal sensation. Even if the local thermal sensation is the same, the comfort level can vary depending on the overall thermal sensation. For example, if the whole body feels cold/warm, the same warm/cold local area may feel comfortable. The model mathematically represents this concept. The equations are a bit complicated so we do not show them here. If you are more interested, [see the original paper](https://doi.org/10.1016/j.buildenv.2009.06.015). \[Aki could not understand the nature of equations, need some help]
+Basically, the thermal sensation of a body part is most comfortable when it is neutral, and discomfort increases as it deviates from neutrality. The figure illustrates how local thermal comfort is influenced by overall thermal sensation. Even if the local thermal sensation is the same, the comfort level can vary depending on the overall thermal sensation. For example, if the whole body feels cold/warm, the same warm/cold local area may feel comfortable. The model mathematically represents this concept. The equations are a bit complicated so we do not show them here. If you are more interested, [see the original paper](https://doi.org/10.1016/j.buildenv.2009.06.015).Schematic diagram for predicting local thermal sensation in a steady state
 
-<figure><img src="../../.gitbook/assets/image (21).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (21).png" alt=""><figcaption><p>Schematic diagram for predicting local thermal comfort from overall and local thermal sensation</p></figcaption></figure>
 
 ## [Part 3: Predicting whole-body sensation and comfort](https://doi.org/10.1016/j.buildenv.2009.06.020)
 
