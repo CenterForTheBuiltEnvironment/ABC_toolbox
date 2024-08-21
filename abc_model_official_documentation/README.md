@@ -1,17 +1,17 @@
 ---
-description: Official documentation webpage
 icon: face-smile-beam
+description: Official documentation webpage
 ---
 
 # Advanced Berkeley Comfort (ABC) model
 
 The Advanced Berkeley Comfort (ABC) model, originally developed by the Building Sciences Group at UCB for the evaluation of human comfort in automobiles, is one of the most sophisticated thermal comfort models in existence. The comfort models for local body parts and body overall are based on intensive human subject tests carried out at CBE environmental chamber. So far, these are the only models available which predict comfort for local body parts, therefore a good model to predict comfort under non-uniform environments.&#x20;
 
-## Web interface
+## Online tool
 
 Let's quickly dive into and explore [the live deployment of our current web interface for the ABC model](https://clownfish-app-wxmgi.ondigitalocean.app/). For additional information about the web interface, [here](documentation/web-interface/) is the documentation for the web interface.
 
-<figure><img src=".gitbook/assets/image (78).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (78).png" alt=""><figcaption><p>Screenshot of ABC model web interface</p></figcaption></figure>
 
 ## Run the model in your favorite programming language
 
