@@ -27,8 +27,7 @@
 
 * [References](references/references.md)
 * [Past presentation](references/past-presentation.md)
-* [Useful tools](references/useful-tools/README.md)
-  * [Online JSON Viewer](references/useful-tools/online-json-viewer.md)
+* [Useful tools](references/useful-tools.md)
 
 ## Changelog
 
