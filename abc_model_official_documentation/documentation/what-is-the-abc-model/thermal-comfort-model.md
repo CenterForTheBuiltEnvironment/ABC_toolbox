@@ -1,3 +1,7 @@
+---
+icon: message-smile
+---
+
 # Thermal comfort model
 
 ## Overview

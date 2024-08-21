@@ -1,3 +1,7 @@
+---
+icon: stomach
+---
+
 # Thermal phygiology model
 
 ## Overview
