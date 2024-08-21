@@ -1,3 +1,7 @@
+---
+icon: registered
+---
+
 # Example code in R
 
 {% tabs %}
