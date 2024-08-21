@@ -1,3 +1,7 @@
+---
+icon: python
+---
+
 # Example code in Python
 
 {% tabs %}

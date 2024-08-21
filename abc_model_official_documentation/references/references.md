@@ -1,5 +1,5 @@
 ---
-icon: asterisk
+icon: book
 ---
 
 # References

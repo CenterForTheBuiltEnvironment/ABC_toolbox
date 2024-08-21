@@ -1,3 +1,7 @@
+---
+icon: timeline-arrow
+---
+
 # Changelog
 
 ## Web interface
