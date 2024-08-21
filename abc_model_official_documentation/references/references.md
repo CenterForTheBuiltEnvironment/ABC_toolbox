@@ -1,3 +1,7 @@
+---
+icon: asterisk
+---
+
 # References
 
 ## Thermal physiology model
