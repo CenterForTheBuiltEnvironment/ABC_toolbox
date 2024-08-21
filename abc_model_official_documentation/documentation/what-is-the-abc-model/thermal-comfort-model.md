@@ -1,5 +1,5 @@
 ---
-icon: message-smile
+icon: thumbs-up
 ---
 
 # Thermal comfort model

@@ -1,3 +1,7 @@
+---
+icon: js
+---
+
 # Online JSON Viewer
 
 If you want to look at a JSON file in detail, we recommend copying the JSON input/output schema file and pasting it to [Online JSON Viewer](https://jsonviewer.stack.hu/).&#x20;
