@@ -22,7 +22,7 @@ To address non-uniform and transient conditions, it is essential to set nodes fo
 * Added body builder model that considers the effect of the body (body height, weight, age, and sex) on thermal physiology
 * Integrated the Berkeley comfort model (comfort equations proposed by CBE)
 
-<figure><img src="../../.gitbook/assets/image (47).png" alt=""><figcaption><p>aaaaaaaaaaaaaaa</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (47).png" alt=""><figcaption><p>Examples of uneven temperature settings: (a) Personal Comfort Systems like chair heaters, foot warmers, and desk fans. (b) Spaces near building facade.</p></figcaption></figure>
 
 ## Benefits of comfort simulation
 
