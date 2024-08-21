@@ -1,5 +1,6 @@
 ---
 description: Official documentation webpage
+icon: face-smile-beam
 ---
 
 # Advanced Berkeley Comfort (ABC) model

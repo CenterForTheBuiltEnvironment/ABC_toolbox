@@ -10,7 +10,7 @@ Link to [Online JSON Viewer](https://jsonviewer.stack.hu/)
 
 This online tool lets you see a JSON file more easily and helps you understand its data structure. Below is a screen capture of the input JSON schema viewed by the Online JSON Viewer. You can see, for example, that there is a "bodybuilder" object in the file, and it has some properties representing the simulated body, such as "age," "body\_fat," and "sex."&#x20;
 
-<figure><img src="../.gitbook/assets/image (34).png" alt=""><figcaption><p>Screencapture of input JSON file viewd by Online JSON Viewer</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (34).png" alt=""><figcaption><p>Screencapture of input JSON file viewd by Online JSON Viewer</p></figcaption></figure>
 
 
 
