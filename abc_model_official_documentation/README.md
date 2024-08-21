@@ -1,5 +1,5 @@
 ---
-icon: face-smile-beam
+icon: house
 description: Official documentation webpage
 ---
 
