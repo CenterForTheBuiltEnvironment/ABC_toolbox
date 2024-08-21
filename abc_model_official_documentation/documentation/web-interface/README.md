@@ -1,3 +1,7 @@
+---
+icon: globe-pointer
+---
+
 # Web interface
 
 ## Overview

@@ -1,5 +1,6 @@
 ---
 description: This page explains the detail of inputs for ABC model.
+icon: file-lines
 layout:
   title:
     visible: true

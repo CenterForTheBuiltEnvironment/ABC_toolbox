@@ -1,3 +1,7 @@
+---
+icon: question
+---
+
 # What is the ABC model?
 
 ## Overview
