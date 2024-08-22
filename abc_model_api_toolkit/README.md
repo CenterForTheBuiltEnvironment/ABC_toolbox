@@ -17,4 +17,7 @@ Clone and use this package by the following command:
 !git clone https://github.com/CenterForTheBuiltEnvironment/ABC_toolbox.git
 ```
 
-[example.py](example/example.py) test
+## Examples
+ - `Python file`: [example.py](example/example.py)
+ - `Python in Google Colaboratory`: [Example_ABC_model_API_in_Python.ipynb](example/Example_ABC_model_API_in_Python.ipynb)
+ - `R in Google Colaboratory`: [Example_ABC_model_API_in_R.ipynb](example/Example_ABC_model_API_in_R.ipynb)
