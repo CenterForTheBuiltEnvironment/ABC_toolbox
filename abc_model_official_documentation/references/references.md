@@ -1,3 +1,7 @@
+---
+icon: book
+---
+
 # References
 
 ## Thermal physiology model

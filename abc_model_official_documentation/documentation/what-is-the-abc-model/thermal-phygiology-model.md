@@ -1,24 +1,24 @@
+---
+icon: stomach
+---
+
 # Thermal phygiology model
 
 ## Overview
 
-The thermal physiology model within the ABC is based on the Stolwijk model of human thermal regulation but includes several significant improvements. Our model allows unlimited body segments (compared to six in the Stolwijk model) and has 16 body segments as default. They are the head, chest, back, pelvis, right and left upper arms, right and left lower arms, right and left hands, right and left thighs, right and left lower legs, and right and left feet. Each segment is modeled as four body layers (core, muscle, fat, and skin tissues) and a clothing layer. The model calculates heat transfer within and between these segments and the environment.&#x20;
+The thermal physiology model within the ABC is based on [Stowijk's model](https://chrome-extension/efaidnbmnnnibpcajpcglclefindmkaj/https://ntrs.nasa.gov/api/citations/19710023925/downloads/19710023925.pdf) of human thermal regulation but includes several significant improvements. Our model allows unlimited body segments (compared to six in the Stolwijk model) and has 16 body segments as default. They are the head, chest, back, pelvis, right and left upper arms, right and left lower arms, right and left hands, right and left thighs, right and left lower legs, and right and left feet. Each segment is modeled as four body layers (core, muscle, fat, and skin tissues) and a clothing layer. The model calculates heat transfer within and between these segments and the environment.&#x20;
 
 Physiological mechanisms such as vasodilation, vasoconstriction, sweating, and metabolic heat production are explicitly considered. Convection, conduction (such as to a car seat or other surface in contact with any part of the body), and radiation between the body and the environment are treated independently. The model can predict human physiological responses to transient, non-uniform thermal environments.
 
+Read more about [our physiological model written by Huizenga et al](https://doi.org/10.1016/S0360-1323\(00\)00061-5).
+
 <figure><img src="../../.gitbook/assets/image (55).png" alt=""><figcaption><p>Model diagram: The body is divided into 16 segments, and each segment transfers the heat through convection, radiation, conduction, and so on with the human thermoregulation system.</p></figcaption></figure>
-
-Read more about the physiological model written by Huizenga et al.
-
-{% embed url="https://doi.org/10.1016/S0360-1323(00)00061-5" %}
-Link to the paper
-{% endembed %}
 
 ## Passive system
 
 ### Basics of lumped heat capacity model
 
-The ABC model is a lumped heat capacity model that assumes uniform temperature throughout an object's interior. This method is commonly used for building heat transfer, ventilation, and electricity calculations and so on.
+The ABC model is a lumped heat capacity model that assumes uniform temperature throughout an object's interior. This method is commonly used for building heat transfer, ventilation, and electricity calculations, and so on.
 
 **Calculating a person's body temperature is similar to solving the room temperature at a given time. Let's look at the very simple example below.**&#x20;
 
@@ -52,7 +52,6 @@ The code is here. In this program, the differential equation is solved using [th
 
 <summary>Click to expand an example Python code</summary>
 
-{% code title="example_transient_heat_transfer.py" %}
 ```python
 import os
 import numpy as np
@@ -60,15 +59,15 @@ import matplotlib.pyplot as plt
 
 # Parameter settings
 C = 500000  # Heat capacity of room air (J/K), calculated for an average house
-h = 2       # Heat transfer coefficient (W/(m^2・K))
-A = 400     # Surface area through which heat escapes (m^2)
-T_out = 0   # Outdoor temperature (°C)
-Q = 5000    # Heat supplied from a heat source (W), assuming a moderate heating system
-T_initial = 20 # Initial indoor temperature (°C)
+h = 2  # Heat transfer coefficient (W/(m^2ã»K))
+A = 400  # Surface area through which heat escapes (m^2)
+T_out = 0  # Outdoor temperature (Â°C)
+Q = 5000  # Heat supplied from a heat source (W), assuming a moderate heating system
+T_initial = 20  # Initial indoor temperature (Â°C)
 
 # Time settings
 t_end = 3600  # Total time for calculation (seconds)
-dt = 60       # Time step (seconds)
+dt = 60  # Time step (seconds)
 
 # Number of time steps
 n_steps = int(t_end / dt)
@@ -79,32 +78,32 @@ temperatures[0] = T_initial
 
 # Solving the equation using the Explicit Euler Method
 for i in range(1, n_steps):
-    dTdt = (Q - h * A * (temperatures[i-1] - T_out)) / C
-    temperatures[i] = temperatures[i-1] + dTdt * dt
+    dTdt = (Q - h * A * (temperatures[i - 1] - T_out)) / C
+    temperatures[i] = temperatures[i - 1] + dTdt * dt
 
 # Generating the time axis
 time = np.linspace(0, t_end / 60, n_steps)  # Convert seconds to minutes
 
 # Plotting the results
 plt.figure(figsize=(10, 6))
-plt.plot(time, temperatures, label='Room Temperature', marker='o')
-plt.xlabel('Time (minutes)')
-plt.ylabel('Temperature (°C)')
-plt.title('Room Temperature Over Time')
+plt.plot(time, temperatures, label="Room Temperature", marker="o")
+plt.xlabel("Time (minutes)")
+plt.ylabel("Temperature (Â°C)")
+plt.title("Room Temperature Over Time")
 plt.legend()
 plt.grid(True)
 
-save_path = "C:\\Users\\monyo\\PycharmProjects\\ABC_JSON_schema\\figure"
+save_path = "/abc_model_official_documenation/figure"
 plt.savefig(os.path.join(save_path, "example_transient_heat_transfer.svg"))
 plt.show()
+
 ```
-{% endcode %}
 
 </details>
 
 ### Thermal network between nodes
 
-In the ABC model, the thermal network is more complex than the one of example above. The heat exchange within the body can be divided into four conditions based on the presence or absence of clothing and contact, as shown in the diagram below. The model calculates heat exchange with heat capacity for the core, muscles, fat, skin, and clothing. A heat balance equation is constructed for each node as shown above, and the temperatures of each node are calculated by solving simultaneous equations for the number of components. The values for thermal resistance and heat capacity of each node are based on the Stolwijk model.
+In the ABC model, the thermal network is more complex than the example above. The heat exchange within the body can be divided into four conditions based on the presence or absence of clothing and contact, as shown in the diagram below. The model calculates heat exchange with heat capacity for the core, muscles, fat, skin, and clothing. A heat balance equation is constructed for each node, and the temperatures of each node are calculated by solving simultaneous equations for the number of components. The values for thermal resistance and heat capacity of each node are based on [Stowijk's model](https://chrome-extension/efaidnbmnnnibpcajpcglclefindmkaj/https://ntrs.nasa.gov/api/citations/19710023925/downloads/19710023925.pdf).
 
 {% hint style="success" %}
 As of 2024, the parameter values, formulas, and programs of the ABC model have not been publicly available, but you can refer to a similar model, [JOS-3](https://doi.org/10.1016/j.enbuild.2020.110575), which is also based on the Stolwijk model.

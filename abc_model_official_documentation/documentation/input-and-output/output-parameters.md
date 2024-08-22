@@ -1,3 +1,7 @@
+---
+icon: arrow-left-from-bracket
+---
+
 # Output parameters
 
 ## Example output JSON file

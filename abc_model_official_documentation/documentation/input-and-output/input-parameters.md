@@ -1,3 +1,7 @@
+---
+icon: arrow-right-to-bracket
+---
+
 # Input parameters
 
 ## Example input JSON file

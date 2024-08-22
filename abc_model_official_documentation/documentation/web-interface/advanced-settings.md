@@ -1,3 +1,7 @@
+---
+icon: gear
+---
+
 # Advanced settings
 
 In the advanced settings, you can configure more advanced settings for those who want to perform more detailed simulations.

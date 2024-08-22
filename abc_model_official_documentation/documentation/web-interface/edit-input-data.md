@@ -1,3 +1,7 @@
+---
+icon: pen-to-square
+---
+
 # Edit input data
 
 ## Overview

@@ -1,10 +1,14 @@
+---
+icon: question
+---
+
 # What is the ABC model?
 
 ## Overview
 
-The Advanced Berkeley Comfort (ABC) model, initially developed by the Building Sciences Group at the University of California, Berkeley, for evaluating human comfort in automobiles, is one of the most sophisticated thermal comfort models. The comfort models for local body parts and overall are based on intensive human subject tests carried out at the CBE environmental chamber. So far, these are the only models available which predict comfort for local body parts, therefore a good model to predict comfort under non-uniform environments. The model has been under development at UC Berkeley since the early 90s.&#x20;
+The Advanced Berkeley Comfort (ABC) model, initially developed by the Building Sciences Group at the University of California, Berkeley, for evaluating human comfort in automobiles, is one of the most sophisticated thermal comfort models. The comfort models for local body parts and overall are based on intensive human subject tests carried out at the CBE environmental chamber. So far, these are the only models available that predict comfort for local body parts, therefore a good model to predict comfort under non-uniform environments. The model has been under development at UC Berkeley since the early 90s.&#x20;
 
-This model integrates a physiological model that calculates the skin's surface and core temperatures by taking into account human body's thermoregulatory functions such as perspiration and blood flow adjustments in response to the surrounding thermal environment and the body's thermal balance. Additionally, it incorporates a comfort model that predicts thermal comfort levels—ranging from feeling hot or cold to experiencing comfort or discomfort—based on the skin temperature.
+This model integrates a physiological model that calculates the skin's surface and core temperatures by taking into account the human body's thermoregulatory functions such as perspiration and blood flow adjustments in response to the surrounding thermal environment and the body's thermal balance. Additionally, it incorporates a comfort model that predicts thermal comfort levels—ranging from feeling hot or cold to experiencing comfort or discomfort—based on the skin temperature.
 
 <figure><img src="../../.gitbook/assets/image (32).png" alt=""><figcaption><p>(a) Previous Windows-based interface: The model predicts local and overall thermal sensation and comfort; (b) Prediction flow: the ABC model comprises the thermal physiology model and thermal comfort model.</p></figcaption></figure>
 
@@ -22,7 +26,7 @@ To address non-uniform and transient conditions, it is essential to set nodes fo
 * Added body builder model that considers the effect of the body (body height, weight, age, and sex) on thermal physiology
 * Integrated the Berkeley comfort model (comfort equations proposed by CBE)
 
-<figure><img src="../../.gitbook/assets/image (47).png" alt=""><figcaption><p>aaaaaaaaaaaaaaa</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (47).png" alt=""><figcaption><p>Examples of uneven temperature settings: (a) Personal Comfort Systems like chair heaters, foot warmers, and desk fans. (b) Spaces near building facade.</p></figcaption></figure>
 
 ## Benefits of comfort simulation
 
