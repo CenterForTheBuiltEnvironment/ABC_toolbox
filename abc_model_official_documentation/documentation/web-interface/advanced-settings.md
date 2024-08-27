@@ -1,5 +1,6 @@
 ---
 icon: gear
+description: Description about the advanced settings for more detailed simulation
 ---
 
 # Advanced settings

@@ -1,5 +1,6 @@
 ---
 icon: globe-pointer
+description: Description about Web user interface
 ---
 
 # Web interface
