@@ -14,8 +14,8 @@ For more details, visit the [abc\_model\_api\_toolkit GitHub repository](https:/
 {% tab title="Example code" %}
 Example code in Google Colaboratory:
 
-{% embed url="https://colab.research.google.com/github/CenterForTheBuiltEnvironment/ABC_toolbox/blob/main/abc_model_api_toolkit/example/Example_ABC_model_API_in_Python.ipynb" %}
-Example code to use ABC model API
+{% embed url="https://colab.research.google.com/github/CenterForTheBuiltEnvironment/ABC_toolbox/blob/main/abc_model_api_toolkit/example/Example_ABC_model_API_in_R.ipynb" %}
+Example code to use ABC model API in R
 {% endembed %}
 {% endtab %}
 {% endtabs %}
