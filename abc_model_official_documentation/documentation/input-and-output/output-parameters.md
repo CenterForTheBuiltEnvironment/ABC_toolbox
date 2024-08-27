@@ -1,5 +1,6 @@
 ---
 icon: arrow-left-from-bracket
+description: Detailed description about output parameters
 ---
 
 # Output parameters

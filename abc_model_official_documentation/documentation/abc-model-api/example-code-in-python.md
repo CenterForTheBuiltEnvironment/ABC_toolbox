@@ -1,5 +1,6 @@
 ---
 icon: python
+description: Description about how to use ABC model API with Python
 ---
 
 # Example code in Python
@@ -21,9 +22,6 @@ For more details, visit the [abc\_model\_api\_toolkit GitHub repository](https:/
 * Python 3
 * Standard libraries:
   * `json`: Utilized for parsing JSON data.
-  * `argparse`: Helps in parsing command line arguments.
-  * `logging`: Provides logging capabilities to output error and status messages.
-  * `sys`: Used for system-specific parameters and functions, particularly for exiting the script upon encountering an error.
 * `requests`: Used for making HTTP requests to the API.
 {% endtab %}
 

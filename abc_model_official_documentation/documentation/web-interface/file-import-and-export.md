@@ -1,5 +1,8 @@
 ---
 icon: arrow-down-to-line
+description: >-
+  Description about how to import your JSON file and to export the results as
+  JSON or CSV file
 ---
 
 # File import and export

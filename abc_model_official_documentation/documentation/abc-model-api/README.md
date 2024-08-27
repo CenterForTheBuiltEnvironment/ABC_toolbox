@@ -1,5 +1,6 @@
 ---
 icon: cloud-check
+description: General description about API and ABC model API
 ---
 
 # ABC Model API
@@ -27,6 +28,3 @@ We use [DigitalOcean](https://www.digitalocean.com/) for this cloud computing an
 
 **https://fastabc-57h9n.ondigitalocean.app/abc**
 {% endhint %}
-
-<figure><img src="../../.gitbook/assets/image (18).png" alt=""><figcaption><p>Diagram of ABC Model API</p></figcaption></figure>
-
