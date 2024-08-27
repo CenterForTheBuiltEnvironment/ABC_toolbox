@@ -1,5 +1,6 @@
 ---
 icon: stomach
+description: Description about a thermal phygiology model of ABC model
 ---
 
 # Thermal phygiology model

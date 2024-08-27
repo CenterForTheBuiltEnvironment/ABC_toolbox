@@ -1,6 +1,6 @@
 ---
-description: This page explains the detail of inputs for ABC model.
 icon: file-lines
+description: Description about input and output parameters of ABC model
 layout:
   title:
     visible: true

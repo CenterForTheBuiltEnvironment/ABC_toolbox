@@ -1,5 +1,6 @@
 ---
 icon: arrow-right-to-bracket
+description: Detailed description about input parameters
 ---
 
 # Input parameters

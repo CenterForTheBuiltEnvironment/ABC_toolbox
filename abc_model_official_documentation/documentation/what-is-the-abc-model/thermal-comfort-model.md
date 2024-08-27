@@ -1,5 +1,6 @@
 ---
 icon: thumbs-up
+description: Description about a thermal comfort model of ABC model
 ---
 
 # Thermal comfort model
