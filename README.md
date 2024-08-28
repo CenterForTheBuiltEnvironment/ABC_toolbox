@@ -6,7 +6,7 @@ Please see the README file in each folder for instructions on how to use each to
 The current toolbox includes the following tool and documentation:
  - `abc_model_api_toolkit`: Python package for handling ABC model API.
  - `abc_model_json_schema_toolkit`: JSON schema for ABC model's input and output files.
- - `abc_model_logo`: Contains image files for ABC's logo
+ - `abc_model_logo`: For image files for ABC's logo
  - `abc_model_official_documentation`: Official documentation for ABC model. Synced with Gitbook.
 
 ## Contact
