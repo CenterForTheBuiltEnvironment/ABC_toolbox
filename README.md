@@ -11,7 +11,7 @@ The current toolbox includes the following tool and documentation:
 
 ## Contact
 If you find any errors on this toolbox, please post the issue [here](https://github.com/CenterForTheBuiltEnvironment/ABC_toolbox/issues).
-Or, contact Akihisa Nomoto: monyo323232@gmail.com
+Or, email to the project's administrators: Charlie Huizenga (huizenga@berkeley.edu) and Akihisa Nomoto (monyo323232@gmail.com)
 
 ## License
 The all tools in this toolbox are under the [MIT License](https://en.wikipedia.org/wiki/MIT_License).
