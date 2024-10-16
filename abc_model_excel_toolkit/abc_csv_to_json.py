@@ -262,7 +262,7 @@ class CSVtoJSONConverter:
 
 if __name__ == "__main__":
     # Example usage
-    file_path = "C:\\Users\\monyo\\PycharmProjects\\ABC_JSON_schema\\abc_model_csv_to_json\\abc_csv_input_sample.xlsx"
+    file_path = "/abc_model_excel_toolkit\\abc_csv_input_sample.xlsx"
     converter = CSVtoJSONConverter(file_path)
     output_file = "output.json"
     converter.to_json(output_file)
