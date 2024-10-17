@@ -55,10 +55,13 @@ def import_csv_to_excel(csv_file_path):
 if __name__ == "__main__":
     # Paths for input/output files
     current_dir = os.path.dirname(os.path.abspath(__file__))
-    print("current dir:", current_dir)
 
     # Create a tmp directory for storing files
     temp_dir = os.path.join(current_dir, "tmp")
+
+    # Ensure the tmp directory exists
+    if not os.path.exists(temp_dir):
+        os.makedirs(temp_dir)
 
     input_json_file = os.path.join(temp_dir, f"input_{file_name}.json")
     output_json_file = os.path.join(temp_dir, f"output_result_{file_name}.json")
@@ -75,3 +78,5 @@ if __name__ == "__main__":
     import_csv_to_excel(output_csv_file)
 
     print("All processes completed successfully.")
+
+    input("Press Enter to close this window...")
