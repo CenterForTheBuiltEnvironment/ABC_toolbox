@@ -11,12 +11,12 @@ The current toolbox includes the following tool and documentation:
  - `abc_model_official_documentation`: Official documentation for ABC model. Synced with Gitbook.
 
 
-## Installation Instructions
+## How to install
 
 Follow these steps to set up the virtual environment and install the necessary packages for this project.
 
 ### 1. Clone the Repository
-First, clone this repository to your local machine:
+Clone this repository to your local machine:
 ```bash
 git clone https://github.com/CenterForTheBuiltEnvironment/ABC_toolbox.git
 ```
@@ -27,8 +27,9 @@ Move into the cloned repository directory:
 cd ABC_toolbox
 ```
 ###  3. Create a Virtual Environment
-```bash
 Create a Python virtual environment:
+```bash
+python -m venv env
 ```
 
 ###  4. Activate the Virtual Environment
