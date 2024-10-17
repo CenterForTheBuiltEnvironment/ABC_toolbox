@@ -2,7 +2,7 @@ import pandas as pd
 import json
 
 
-class CSVtoJSONConverter:
+class EXCELtoJSONConverter:
     # Define constants for row numbers and column letters based on the new structure
     ID_ROW, NAME_ROW, DESCRIPTION_ROW, OUTPUT_FREQ_ROW = 3, 4, 5, 6
     BODYBUILDER_START_ROW = 8
@@ -262,7 +262,7 @@ class CSVtoJSONConverter:
 
 if __name__ == "__main__":
     # Example usage
-    file_path = "/abc_model_excel_toolkit\\abc_csv_input_sample.xlsx"
-    converter = CSVtoJSONConverter(file_path)
-    output_file = "output.json"
+    file_path = r"C:\Users\monyo\PycharmProjects\ABC_JSON_schema\abc_model_excel_toolkit\abc_example.xlsm"
+    converter = EXCELtoJSONConverter(file_path)
+    output_file = "example_2.json"
     converter.to_json(output_file)

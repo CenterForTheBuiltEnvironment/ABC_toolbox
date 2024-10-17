@@ -10,6 +10,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\abc_model_excel_toolkit\output_result.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\model\Q.csv">
           <value>
             <Attribute>

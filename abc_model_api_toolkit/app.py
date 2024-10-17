@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify
 import os
-from data_processor import process_json  # Import your processor
+from data_processor import process_json
 
 app = Flask(__name__)
 
