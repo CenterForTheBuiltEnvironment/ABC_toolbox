@@ -1,6 +1,7 @@
 import os
 import pandas as pd
 import xlwings as xw
+import logging
 
 # Add the parent directory to sys.path to ensure correct imports
 import sys
@@ -49,7 +50,7 @@ def import_csv_to_excel(csv_file_path):
     ws.range("A1").value = [df.columns.tolist()]  # Write column headers
     ws.range("A2").value = df.values.tolist()  # Write data
 
-    print(f"CSV data imported to Results sheet.")
+    logging.info(f"CSV data imported to Results sheet.")
 
 
 if __name__ == "__main__":
@@ -77,6 +78,6 @@ if __name__ == "__main__":
     # Step 3: Import CSV to Excel Results sheet
     import_csv_to_excel(output_csv_file)
 
-    print("All processes completed successfully.")
+    logging.info("All processes completed successfully!")
 
-    input("Press Enter to close this window...")
+    logging.info("Press Enter to close this window...")

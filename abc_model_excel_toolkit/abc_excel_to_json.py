@@ -1,13 +1,16 @@
 import pandas as pd
 import json
+import logging
+
+logging.basicConfig(level=logging.INFO)
 
 
 class EXCELtoJSONConverter:
     # Define constants for row numbers and column letters based on the new structure
-    ID_ROW, NAME_ROW, DESCRIPTION_ROW, OUTPUT_FREQ_ROW = 3, 4, 5, 6
-    BODYBUILDER_START_ROW = 8
-    CLOTHING_ENSEMBLE_ROW = 20
-    OPTIONS_START_ROW = 43
+    ID_ROW, NAME_ROW, DESCRIPTION_ROW, OUTPUT_FREQ_ROW = 9, 10, 11, 12
+    BODYBUILDER_START_ROW = 14
+    CLOTHING_ENSEMBLE_ROW = 26
+    OPTIONS_START_ROW = 49
 
     # Column letters for the sheet
     USER_INPUT_DATA_COL = "C"
@@ -55,9 +58,9 @@ class EXCELtoJSONConverter:
         # Load the "SimInfo" sheet
         sim_info_df = pd.read_excel(self.file_path, sheet_name="SimInfo", header=None)
 
-        print("Index C", self._col_letter_to_index("C"))
-        print("ID row", self.ID_ROW)
-        print("Body builder start row", self.BODYBUILDER_START_ROW)
+        logging.debug("Index C", self._col_letter_to_index("C"))
+        logging.debug("ID row", self.ID_ROW)
+        logging.debug("Body builder start row", self.BODYBUILDER_START_ROW)
 
         user_col = self._col_letter_to_index(self.USER_INPUT_DATA_COL)
         default_col = self._col_letter_to_index(self.DEFAULT_INPUT_DATA_COL)
@@ -257,7 +260,9 @@ class EXCELtoJSONConverter:
         with open(output_file_path, "w", encoding="utf-8") as json_file:
             json.dump(sim_info, json_file, indent=4)
 
-        print(f"Conversion complete. JSON saved to {output_file_path}.")
+        logging.info(
+            f"Input JSON conversion has been completed. Input JSON file has been saved to {output_file_path}."
+        )
 
 
 if __name__ == "__main__":
