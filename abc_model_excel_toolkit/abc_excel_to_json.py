@@ -56,7 +56,7 @@ class EXCELtoJSONConverter:
 
     def parse_sim_info(self):
         # Load the "SimInfo" sheet
-        sim_info_df = pd.read_excel(self.file_path, sheet_name="SimInfo", header=None)
+        sim_info_df = pd.read_excel(self.file_path, sheet_name="Simulation Information", header=None)
 
         logging.debug("Index C", self._col_letter_to_index("C"))
         logging.debug("ID row", self.ID_ROW)
@@ -265,9 +265,9 @@ class EXCELtoJSONConverter:
         )
 
 
-if __name__ == "__main__":
-    # Example usage
-    file_path = r"C:\Users\monyo\PycharmProjects\ABC_JSON_schema\abc_model_excel_toolkit\abc_example.xlsm"
-    converter = EXCELtoJSONConverter(file_path)
-    output_file = "example_2.json"
-    converter.to_json(output_file)
+# if __name__ == "__main__":
+#     # Example usage
+#     file_path = r"C:\Users\monyo\PycharmProjects\ABC_toolbox\abc_model_excel_toolkit\abc_example.xlsm"
+#     converter = EXCELtoJSONConverter(file_path)
+#     output_file = "example_2.json"
+#     converter.to_json(output_file)

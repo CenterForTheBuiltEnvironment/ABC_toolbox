@@ -80,4 +80,4 @@ if __name__ == "__main__":
 
     logging.info("All processes completed successfully!")
 
-    logging.info("Press Enter to close this window...")
+    input("Press Enter to close this window...")

@@ -16,13 +16,13 @@ The current toolbox includes the following tool and documentation:
 Follow these steps to set up the virtual environment and install the necessary packages for this project.
 
 ### 1. Clone the Repository
-Clone this repository to your local machine:
+Clone this repository to your local machine (you can set up this using you IDE as well):
 ```bash
 git clone https://github.com/CenterForTheBuiltEnvironment/ABC_toolbox.git
 ```
 
-### 2. Navigate to the Project Directory
-Move into the cloned repository directory:
+### 2. Make sure the Project Directory
+Please make sure the project directory. If you are not be there, move into the cloned repository directory:
 ```bash
 cd ABC_toolbox
 ```
