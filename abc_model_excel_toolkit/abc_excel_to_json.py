@@ -1,9 +1,14 @@
 import pandas as pd
 import json
 import logging
+import xlwings as xw
+import tkinter as tk
+from tkinter import filedialog
 
 logging.basicConfig(level=logging.INFO)
 
+wb = xw.books.active
+ws = wb.sheets["Results"]
 
 class EXCELtoJSONConverter:
     # Define constants for row numbers and column letters based on the new structure
@@ -263,7 +268,6 @@ class EXCELtoJSONConverter:
         logging.info(
             f"Input JSON conversion has been completed. Input JSON file has been saved to {output_file_path}."
         )
-
 
 # if __name__ == "__main__":
 #     # Example usage
