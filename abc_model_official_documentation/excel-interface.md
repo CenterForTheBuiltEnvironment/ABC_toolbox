@@ -31,15 +31,31 @@ To run the model, **specify the file path for the downloaded ABC toolbox folder*
 The **"Simulate" button** on this sheet allows you to execute the model. In its current format, you can enter your data into the cells in column C. If left empty, the default values in column D will be used.
 {% endhint %}
 
-<figure><img src=".gitbook/assets/image.png" alt=""><figcaption><p>Simulation informatuion sheet: All the simulation inputs except thermal environmental parameters shoud be input here.</p></figcaption></figure>
+<figure><img src=".gitbook/assets/image.png" alt=""><figcaption><p>Simulation Informatuion Sheet: All the simulation inputs except thermal environmental parameters shoud be input here.</p></figcaption></figure>
 
 ### Thermal Environment
 
 This sheet is for defining thermal environment information.
 
-\- Results: The output results of the ABC model will be written here.
+{% hint style="info" %}
+You need to specify the required input fields highlighted in yellow.
+{% endhint %}
 
-\- Clothing Reference: This sheet contains past clothing insulation data. Use it as a reference for entering clothing insulation values in the SimInfo sheet.
+<figure><img src=".gitbook/assets/image (79).png" alt=""><figcaption><p>Thermal Environment Sheet: You can define thermal conditions for each local body part over time.</p></figcaption></figure>
+
+### Results
+
+The output results of the ABC model will be written here.&#x20;
+
+{% hint style="info" %}
+If you are unsure about the meaning of the columns, please refer to the output file ([input-and-output](documentation/input-and-output/ "mention")).
+{% endhint %}
+
+<figure><img src=".gitbook/assets/image (80).png" alt=""><figcaption><p>Results Sheet: The output results of the ABC model will be written here.</p></figcaption></figure>
+
+### Clothing Reference
+
+This sheet contains past clothing insulation data. Use it as a reference for entering clothing insulation values in the SimInfo sheet.
 
 \- Change Log: For version control.
 
