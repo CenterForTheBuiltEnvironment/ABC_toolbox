@@ -18,6 +18,10 @@
   * [File import and export](documentation/web-interface/file-import-and-export.md)
   * [Advanced settings](documentation/web-interface/advanced-settings.md)
 
+***
+
+* [Excel interface](excel-interface.md)
+
 ## HELP & FAQs
 
 * [FAQs](help-and-faqs/faqs.md)
