@@ -59,7 +59,7 @@ For example, in this screen capture below, the desk fan is selected.
 
 Fans provide air movement. If you click on the Edit air speed\<Edit variable data, you will see the contributions by the desk fan in red.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 The table below summarizes the impact of typical PCS on thermal environmental parameters.
 
