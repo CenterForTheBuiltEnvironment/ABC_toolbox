@@ -17,10 +17,7 @@
   * [Edit input data](documentation/web-interface/edit-input-data.md)
   * [File import and export](documentation/web-interface/file-import-and-export.md)
   * [Advanced settings](documentation/web-interface/advanced-settings.md)
-
-***
-
-* [Excel interface](excel-interface.md)
+* [Excel interface](documentation/excel-interface.md)
 
 ## HELP & FAQs
 

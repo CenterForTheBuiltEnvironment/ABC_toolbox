@@ -55,11 +55,11 @@ We call devices like desk fans and foot warmers Personal Comfort Systems (PCS), 
 
 For example, in this screen capture below, the desk fan is selected.
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 Fans provide air movement. If you click on the Edit air speed\<Edit variable data, you will see the contributions by the desk fan in red.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 The table below summarizes the impact of typical PCS on thermal environmental parameters.
 
