@@ -15,24 +15,23 @@ The current toolbox includes the following tool and documentation:
 
 Follow these steps to set up the virtual environment and install the necessary packages for this project.
 
-### 1. Clone the Repository
-Clone this repository to your local machine (you can set up this using you IDE as well):
+1. Clone this repository to your local machine (you can set up this using you IDE as well):
 ```bash
 git clone https://github.com/CenterForTheBuiltEnvironment/ABC_toolbox.git
 ```
 
-### 2. Make sure the Project Directory
+2. Make sure the Project Directory
 Please make sure the project directory. If you are not be there, move into the cloned repository directory:
 ```bash
 cd ABC_toolbox
 ```
-###  3. Create a Virtual Environment
+3. Create a Virtual Environment
 Create a Python virtual environment:
 ```bash
 python -m venv env
 ```
 
-###  4. Activate the Virtual Environment
+4. Activate the Virtual Environment
 Activate the virtual environment.
 
 For Mac/Linux:
@@ -45,7 +44,7 @@ For Windows:
 env\Scripts\activate
 ```
 
-###  5. Install the Required Packages
+5. Install the Required Packages
 While inside the virtual environment, install the necessary packages using the requirements.txt file:
 ```bash
 pip install -r requirements.txt
