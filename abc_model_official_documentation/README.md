@@ -24,7 +24,3 @@ We offer an official API (ABC model API) with example code written in several po
 ## Fundings
 
 Over the decades, this work has been supported by many different funding sources in many different ways. It is difficult to name all the sponsors here, but we thank all funding support.
-
-## Conflict of interests
-
-The Center for the Built Environment (CBE) at the University of California, Berkeley, with which some of the authors are affiliated, is advised and funded, in part, by many partners that represent a diversity of organizations from the building industry, including manufacturers, building owners, facility managers, contractors, architects, engineers, government agencies, and utilities.

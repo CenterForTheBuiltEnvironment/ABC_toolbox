@@ -26,7 +26,7 @@
 
 ## References
 
-* [References](references/references.md)
+* [List of references](references/list-of-references.md)
 * [Past presentation](references/past-presentation.md)
 * [Useful tools](references/useful-tools.md)
 

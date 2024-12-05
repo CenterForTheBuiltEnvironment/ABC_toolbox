@@ -25,7 +25,7 @@ The ABC model is a lumped heat capacity model that assumes uniform temperature t
 
 <figure><img src="../../.gitbook/assets/image (24).png" alt=""><figcaption><p>Simple example of heat exchange between house and outside</p></figcaption></figure>
 
-Given the conditions above, the indoor temperature _T_in can be calculated by solving the following differential equation related to energy as equation (1). The heat flux between inside and outside can be calculated as equation (2). Here, heat transfer coefficient _h_ is the reciprocal of the sum of the resistance values of the indoor and outdoor areas. The resistance values are generally determined by the insulation level of the building and the outdoor air.
+Given the conditions above, the indoor temperature _&#x54;_&#x69;n can be calculated by solving the following differential equation related to energy as equation (1). The heat flux between inside and outside can be calculated as equation (2). Here, heat transfer coefficient _h_ is the reciprocal of the sum of the resistance values of the indoor and outdoor areas. The resistance values are generally determined by the insulation level of the building and the outdoor air.
 
 $$
 C \frac{d T_{\text{in}}}{dt} = Q - q...(1)
@@ -133,7 +133,7 @@ The human body employs sophisticated mechanisms to maintain thermal equilibrium,
 
 ### Modeling of human body thermoregulation
 
-In the model, to mathematically describe the thermoregulatory mechanisms, the difference between the set-point temperature _T_set (similar to the set temperature of an air conditioner) and the actual body temperature _T_ is treated as the error signal _Error_ to determine the degree of thermoregulation. Set point temperature is defined as the body temperature in a thermally neutral state. Skin blood flow and sweating increase as the difference between the current temperature and the set-point temperature increases. As the difference decreases, skin blood flow decreases, and shivering thermogenesis increases.&#x20;
+In the model, to mathematically describe the thermoregulatory mechanisms, the difference between the set-point temperature _&#x54;_&#x73;et (similar to the set temperature of an air conditioner) and the actual body temperature _T_ is treated as the error signal _Error_ to determine the degree of thermoregulation. Set point temperature is defined as the body temperature in a thermally neutral state. Skin blood flow and sweating increase as the difference between the current temperature and the set-point temperature increases. As the difference decreases, skin blood flow decreases, and shivering thermogenesis increases.&#x20;
 
 $$
 Error = T -  T_{set}
