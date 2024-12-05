@@ -42,12 +42,13 @@ def save_output(file_path: str, data: str) -> None:
         raise
 
 
-def call_abc_model_api(input_file: str, output_file: str, url: str, timeout: int = 10):
+def get_abc_model_api_results(input_file: str, output_file: str, api_url: str, timeout: int = 10):
     input_text = read_json_file(input_file)
     headers = {"Content-Type": "application/json"}
-    response = post_json_data(url, input_text, headers, timeout)
+    response = post_json_data(api_url, input_text, headers, timeout)
     if response.status_code == 200:
         save_output(output_file, response.text)
+        return output_file
     else:
         logging.error(f"Response error: {response.status_code}")
         logging.error(response.text)
