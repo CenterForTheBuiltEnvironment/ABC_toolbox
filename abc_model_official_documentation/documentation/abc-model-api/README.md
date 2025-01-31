@@ -24,7 +24,7 @@ An intoruductory video about API by MuleSoft Videos
 ABC Model API seamlessly integrates the ABC model into third-party applications, allowing you to use its capability in your Web application or program. All you need to do is send ABC Model API an input JSON file with some simple rules setting ambient thermal parameters such as air temperature, air velocity, environmental temperature, etc. ABC Model API gets the model running with your input file and returns the comfort model's result.
 
 {% hint style="info" %}
-We use [DigitalOcean](https://www.digitalocean.com/) for this cloud computing and the URL of the ABC model API is:&#x20;
+You can use the API URL for this cloud computing:&#x20;
 
-**https://fastabc-57h9n.ondigitalocean.app/abc**
+[**https://backend-384255928646.us-west1.run.app/abc**](https://backend-384255928646.us-west1.run.app/abc)
 {% endhint %}
