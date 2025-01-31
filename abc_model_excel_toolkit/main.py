@@ -11,7 +11,7 @@ if parent_dir not in sys.path:
     sys.path.append(parent_dir)
 
 # Importing from abc_model_api_toolkit
-from abc_model_api_toolkit.api_client import call_abc_model_api
+from abc_model_api_toolkit.api_client import get_abc_model_api_results
 from abc_model_api_toolkit.data_processor import output_json_to_csv
 
 # Importing from abc_model_excel_toolkit
@@ -32,10 +32,10 @@ def run_abc(
     input_json_file,
     output_json_file,
     output_csv_file,
-    api_url="https://fastabc-57h9n.ondigitalocean.app/abc",
+    api_url="https://backend-384255928646.us-west1.run.app/abc",
 ):
-    call_abc_model_api(input_json_file, output_json_file, api_url)
-    output_json_to_csv(output_json_file, output_csv_file)
+    results = get_abc_model_api_results(input_json_file, output_json_file, api_url)
+    output_json_to_csv(output_json_file_path=results,csv_file_path=output_csv_file)
 
 
 def import_csv_to_excel(csv_file_path):
