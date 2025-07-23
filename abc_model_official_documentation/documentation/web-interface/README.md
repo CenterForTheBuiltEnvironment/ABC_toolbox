@@ -1,6 +1,6 @@
 ---
-icon: globe-pointer
 description: Description about Web user interface
+icon: globe-pointer
 ---
 
 # Web interface
@@ -25,7 +25,7 @@ We will explain in more detail below but let's first try a quick simulation usin
 3. **Set input conditions -** In each condition, configure exposure time and thermal environment settings (e.g., a person is sitting at 25C of air temperature for 60 minutes ).&#x20;
 4. **Run simulation** - Click the **"Simulation"** button.
 
-<figure><img src="../../.gitbook/assets/image (64).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Main page
 
@@ -39,10 +39,8 @@ This page appears after running a simulation. The left side displays the input c
 
 * **Time-series results:** Displays your selected result over time.
 * **3D manikin:** Visualizes results for different body parts. Clicking on any time point in the time-series data updates the manikin with data from that moment.
-* **Upper tabs**
-  * **Compare tab:** Compare one simulation and the other to see the difference in the graph.
-  * **Body segment tab:** Select different body segments (Overall, Head, Chest, Arm, etc.) and&#x20;
-  * **Result item tab:** Select result items (Comfort, Sensation, Skin temperature, Core temperature, etc.) to view specific results that you want to see.
-  * **CSV export tab:** Save all the simulation results to your local environment.
+* **Body segment selector:** Select different body segments (Overall, Head, Chest, Arm, etc.) to display.
+* **Result item selector:** Select result items (Comfort, Sensation, Skin temperature, Core temperature, etc.) to display.
+* **CSV export button:** Save all the simulation results to your local device.
 
-<figure><img src="../../.gitbook/assets/image (65).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (81).png" alt=""><figcaption></figcaption></figure>
