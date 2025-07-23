@@ -1,8 +1,8 @@
 ---
-icon: arrow-down-to-line
 description: >-
   Description about how to import your JSON file and to export the results as
   JSON or CSV file
+icon: arrow-down-to-line
 ---
 
 # File import and export
@@ -11,7 +11,7 @@ description: >-
 
 The interface allows you to load input files in JSON format and export the results of simulations. For example, you can export an input file created by the interface before a meeting and load it during the meeting. It is also helpful for comparing the results of different simulations.
 
-<figure><img src="../../.gitbook/assets/image (67).png" alt=""><figcaption><p>The locations of file import/file export/csv export buttons</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (90).png" alt=""><figcaption></figcaption></figure>
 
 ## File import
 

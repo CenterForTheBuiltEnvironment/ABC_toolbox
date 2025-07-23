@@ -1,6 +1,6 @@
 ---
-icon: gear
 description: Description about the advanced settings for more detailed simulation
+icon: gear
 ---
 
 # Advanced settings
@@ -13,10 +13,10 @@ The Body Builder function allows you to precisely define the simulated human bod
 
 Click here ([#bodybuilder](../what-is-the-abc-model/thermal-phygiology-model.md#bodybuilder "mention")) to learn more about the Body Builder function.
 
-<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption><p>Body Builder settings</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (91).png" alt=""><figcaption></figcaption></figure>
 
 ## Personal Comfort System (PCS)
 
 In the Personal Comfort System (PCS) section, you can define the changes in the thermal environment created by each PCS manually. Default values are already provided. For example, the values below indicate that a desk fan creates an airflow velocity of 0.7 m/s around the head and 0.2 m/s around the chest as a default.
 
-<figure><img src="../../.gitbook/assets/image (76).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (92).png" alt=""><figcaption></figcaption></figure>
