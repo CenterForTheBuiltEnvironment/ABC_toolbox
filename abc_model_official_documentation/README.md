@@ -1,6 +1,6 @@
 ---
-icon: house
 description: Official documentation webpage
+icon: house
 ---
 
 # Advanced Berkeley Comfort (ABC) model
@@ -9,9 +9,9 @@ The Advanced Berkeley Comfort (ABC) model, originally developed by the Building 
 
 ## Online tool
 
-Let's quickly dive into and explore [the live deployment of our current web interface for the ABC model](https://abcweb-384255928646.us-west1.run.app/). For additional information about the web interface, [here](documentation/web-interface/) is the documentation for the web interface.
+Let's quickly dive into and explore [the live deployment of our current web interface for the ABC model](https://abc.cbe.berkeley.edu/). For additional information about the web interface, [here](documentation/web-interface/) is the documentation for the web interface.
 
-<figure><img src=".gitbook/assets/image (78).png" alt=""><figcaption><p>Screenshot of ABC model web interface</p></figcaption></figure>
+<figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 ## Run the model in your favorite programming language
 

@@ -1,17 +1,6 @@
 ---
-icon: file-lines
 description: Description about input and output parameters of ABC model
-layout:
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
+icon: file-lines
 ---
 
 # Input and output
