@@ -1,6 +1,6 @@
 # JSON Schema
 
-*Generated on 2024-08-19 13:19:15*
+*Generated on 2025-06-23 13:59:19*
 
 ## Properties
 
